@@ -1,0 +1,25 @@
+{
+  "name": "sakeena-jacobs-recruitment",
+  "version": "1.0.0",
+  "description": "Sakeena Jacobs Recruitment (Pty) Ltd — Official Website",
+  "private": true,
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.9"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "recruitment",
+    "south-africa",
+    "virtual-assistants",
+    "remote-work"
+  ],
+  "author": "Sakeena Jacobs Recruitment (Pty) Ltd",
+  "license": "UNLICENSED"
+}
