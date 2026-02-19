@@ -36,21 +36,10 @@
     "description": "Elite South African remote recruitment agency connecting international businesses with top-tier virtual and executive assistants.",
     "foundingDate": "2018",
     "identifier": "2018/341619/07",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "ZA"
-    },
+    "address": { "@type": "PostalAddress", "addressCountry": "ZA" },
     "contactPoint": [
-      {
-        "@type": "ContactPoint",
-        "email": "info@sakeenajacobsrecruitment.com",
-        "contactType": "customer service"
-      },
-      {
-        "@type": "ContactPoint",
-        "email": "recruitment@sakeenajacobsrecruitment.com",
-        "contactType": "recruitment"
-      }
+      { "@type": "ContactPoint", "email": "info@sakeenajacobsrecruitment.com", "contactType": "customer service" },
+      { "@type": "ContactPoint", "email": "recruitment@sakeenajacobsrecruitment.com", "contactType": "recruitment" }
     ]
   }
   </script>
@@ -66,71 +55,36 @@
   <style>
     /* ─── CSS Variables ─────────────────────────────────────────── */
     :root {
-      --rose:       #A56A6A;
-      --rose-dark:  #8C5757;
-      --rose-deep:  #6E3F3F;
-      --blush:      #E8D6D6;
-      --blush-light:#F5EEEE;
-      --bg:         #F2F2F2;
-      --bg-white:   #FAFAFA;
-      --text:       #2B2B2B;
-      --text-muted: #B8B0AE;
-      --text-mid:   #6B6460;
-      --border:     #E2D8D8;
-      --shadow:     rgba(165, 106, 106, 0.12);
-      --shadow-md:  rgba(165, 106, 106, 0.20);
+      --rose:        #A56A6A;
+      --rose-dark:   #8C5757;
+      --rose-deep:   #6E3F3F;
+      --blush:       #E8D6D6;
+      --blush-light: #F5EEEE;
+      --bg:          #F2F2F2;
+      --bg-white:    #FAFAFA;
+      --text:        #2B2B2B;
+      --text-muted:  #B8B0AE;
+      --text-mid:    #6B6460;
+      --border:      #E2D8D8;
+      --shadow:      rgba(165, 106, 106, 0.12);
+      --shadow-md:   rgba(165, 106, 106, 0.20);
     }
 
     /* ─── Reset & Base ──────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; font-size: 16px; }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-
-    h1, h2, h3, h4 {
-      font-family: 'Playfair Display', serif;
-      line-height: 1.25;
-      color: var(--text);
-    }
-
+    body { font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; overflow-x: hidden; }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; line-height: 1.25; color: var(--text); }
     a { color: inherit; text-decoration: none; }
     img { max-width: 100%; height: auto; }
 
     /* ─── Utilities ─────────────────────────────────────────────── */
-    .container {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-
-    .section {
-      padding: 6rem 0;
-    }
-
-    .section-alt {
-      background: var(--bg-white);
-    }
-
-    .section-dark {
-      background: #2B2B2B;
-      color: #F2F2F2;
-    }
-
-    .section-dark h2,
-    .section-dark h3,
-    .section-dark h4 {
-      color: #F2F2F2;
-    }
-
-    .section-blush {
-      background: var(--blush-light);
-    }
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 2rem; }
+    .section { padding: 6rem 0; }
+    .section-alt { background: var(--bg-white); }
+    .section-dark { background: #2B2B2B; color: #F2F2F2; }
+    .section-dark h2, .section-dark h3, .section-dark h4 { color: #F2F2F2; }
+    .section-blush { background: var(--blush-light); }
 
     .eyebrow {
       display: inline-block;
@@ -142,1131 +96,305 @@
       color: var(--rose);
       margin-bottom: 1rem;
     }
-
-    .section-title {
-      font-size: clamp(2rem, 4vw, 2.8rem);
-      font-weight: 600;
-      margin-bottom: 1.25rem;
-    }
-
-    .section-sub {
-      font-size: 1.05rem;
-      color: var(--text-mid);
-      max-width: 560px;
-      margin-bottom: 3.5rem;
-      font-weight: 300;
-    }
-
-    .divider {
-      width: 48px;
-      height: 2px;
-      background: var(--rose);
-      margin: 1.25rem 0 1.75rem;
-    }
+    .section-title { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 600; margin-bottom: 1.25rem; }
+    .section-sub { font-size: 1.05rem; color: var(--text-mid); max-width: 560px; margin-bottom: 3.5rem; font-weight: 300; }
+    .divider { width: 48px; height: 2px; background: var(--rose); margin: 1.25rem 0 1.75rem; }
 
     /* ─── Buttons ───────────────────────────────────────────────── */
     .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.875rem 2rem;
-      border-radius: 3px;
-      font-family: 'Poppins', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      cursor: pointer;
-      border: none;
-      transition: all 0.25s ease;
-      text-decoration: none;
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.875rem 2rem; border-radius: 3px;
+      font-family: 'Poppins', sans-serif; font-size: 0.9rem; font-weight: 500;
+      letter-spacing: 0.04em; cursor: pointer; border: none;
+      transition: all 0.25s ease; text-decoration: none;
     }
-
-    .btn-primary {
-      background: var(--rose);
-      color: #fff;
-    }
-
-    .btn-primary:hover {
-      background: var(--rose-dark);
-      transform: translateY(-1px);
-      box-shadow: 0 8px 24px var(--shadow-md);
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--rose);
-      border: 1.5px solid var(--rose);
-    }
-
-    .btn-outline:hover {
-      background: var(--rose);
-      color: #fff;
-      transform: translateY(-1px);
-    }
-
-    .btn-ghost {
-      background: rgba(255,255,255,0.12);
-      color: #fff;
-      border: 1.5px solid rgba(255,255,255,0.35);
-      backdrop-filter: blur(8px);
-    }
-
-    .btn-ghost:hover {
-      background: rgba(255,255,255,0.22);
-      transform: translateY(-1px);
-    }
+    .btn-primary { background: var(--rose); color: #fff; }
+    .btn-primary:hover { background: var(--rose-dark); transform: translateY(-1px); box-shadow: 0 8px 24px var(--shadow-md); }
+    .btn-outline { background: transparent; color: var(--rose); border: 1.5px solid var(--rose); }
+    .btn-outline:hover { background: var(--rose); color: #fff; transform: translateY(-1px); }
+    .btn-ghost { background: rgba(255,255,255,0.12); color: #fff; border: 1.5px solid rgba(255,255,255,0.35); backdrop-filter: blur(8px); }
+    .btn-ghost:hover { background: rgba(255,255,255,0.22); transform: translateY(-1px); }
 
     /* ─── Navigation ────────────────────────────────────────────── */
-    .nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      padding: 1.25rem 0;
-      transition: all 0.3s ease;
-    }
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1.25rem 0; transition: all 0.3s ease; }
+    .nav.scrolled { background: rgba(250,250,250,0.96); backdrop-filter: blur(16px); padding: 0.875rem 0; box-shadow: 0 1px 0 var(--border); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; }
 
-    .nav.scrolled {
-      background: rgba(250, 250, 250, 0.96);
-      backdrop-filter: blur(16px);
-      padding: 0.875rem 0;
-      box-shadow: 0 1px 0 var(--border);
-    }
+    /* Logo image */
+    .nav-logo-img { height: 48px; width: auto; display: block; object-fit: contain; transition: opacity 0.2s; }
+    .nav-logo-img:hover { opacity: 0.85; }
+    /* Fallback text */
+    .nav-logo-text { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 600; color: var(--text); line-height: 1.2; display: none; }
+    .nav-logo-text span { display: block; font-size: 0.6rem; font-family: 'Poppins', sans-serif; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rose); margin-top: 1px; }
 
-    .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .nav-logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.15rem;
-      font-weight: 600;
-      color: var(--text);
-      line-height: 1.2;
-    }
-
-    .nav-logo span {
-      display: block;
-      font-size: 0.6rem;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 500;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--rose);
-      margin-top: 1px;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 2.5rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      font-size: 0.82rem;
-      font-weight: 500;
-      letter-spacing: 0.05em;
-      color: var(--text-mid);
-      transition: color 0.2s;
-    }
-
+    .nav-links { display: flex; align-items: center; gap: 2.5rem; list-style: none; }
+    .nav-links a { font-size: 0.82rem; font-weight: 500; letter-spacing: 0.05em; color: var(--text-mid); transition: color 0.2s; }
     .nav-links a:hover { color: var(--rose); }
+    .nav-cta { font-size: 0.82rem; padding: 0.6rem 1.4rem; }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .nav-hamburger span { width: 22px; height: 2px; background: var(--text); transition: all 0.3s; border-radius: 2px; }
 
-    .nav-cta {
-      font-size: 0.82rem;
-      padding: 0.6rem 1.4rem;
-    }
-
-    .nav-hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      padding: 4px;
-    }
-
-    .nav-hamburger span {
-      width: 22px;
-      height: 2px;
-      background: var(--text);
-      transition: all 0.3s;
-      border-radius: 2px;
-    }
-
-    .mobile-menu {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: var(--bg-white);
-      z-index: 999;
-      padding: 5rem 2rem 2rem;
-      flex-direction: column;
-      gap: 2rem;
-    }
-
+    .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--bg-white); z-index: 999; padding: 5rem 2rem 2rem; flex-direction: column; gap: 2rem; }
     .mobile-menu.open { display: flex; }
-    .mobile-menu a {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.6rem;
-      color: var(--text);
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 1rem;
-    }
-
-    .mobile-close {
-      position: absolute;
-      top: 1.5rem;
-      right: 2rem;
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-size: 1.5rem;
-      color: var(--text);
-    }
+    .mobile-menu a { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--text); border-bottom: 1px solid var(--border); padding-bottom: 1rem; }
+    .mobile-close { position: absolute; top: 1.5rem; right: 2rem; background: none; border: none; cursor: pointer; font-size: 1.5rem; color: var(--text); }
 
     /* ─── Hero ──────────────────────────────────────────────────── */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-      background: linear-gradient(155deg,
-        #2B2B2B 0%,
-        #3D2E2E 35%,
-        #5C3D3D 60%,
-        #A56A6A 100%
+    .hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; }
+
+    /* hero-bg.jpg — full bleed background */
+    .hero-bg-img {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; object-position: center 30%; z-index: 0;
+    }
+
+    /* Multi-layer dark gradient overlay — preserves text readability */
+    .hero-overlay {
+      position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(
+        155deg,
+        rgba(22, 15, 15, 0.90) 0%,
+        rgba(44, 24, 24, 0.84) 30%,
+        rgba(68, 34, 34, 0.74) 60%,
+        rgba(115, 65, 65, 0.52) 100%
       );
     }
-
-    .hero::before {
+    .hero-overlay::after {
       content: '';
-      position: absolute;
-      inset: 0;
+      position: absolute; inset: 0;
       background:
-        radial-gradient(ellipse 80% 60% at 70% 50%, rgba(165,106,106,0.25) 0%, transparent 70%),
-        radial-gradient(ellipse 40% 40% at 20% 80%, rgba(232,214,214,0.08) 0%, transparent 60%);
+        radial-gradient(ellipse 75% 55% at 72% 50%, rgba(165,106,106,0.22) 0%, transparent 70%),
+        radial-gradient(ellipse 35% 35% at 18% 80%, rgba(232,214,214,0.07) 0%, transparent 60%);
     }
 
+    /* Noise grain */
     .hero-grain {
-      position: absolute;
-      inset: 0;
-      opacity: 0.04;
+      position: absolute; inset: 0; z-index: 2; opacity: 0.035; pointer-events: none;
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
       background-size: 200px;
     }
 
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 780px;
-    }
+    .hero-content { position: relative; z-index: 3; max-width: 780px; }
+    .hero-eyebrow { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--blush); opacity: 0.8; margin-bottom: 1.75rem; }
+    .hero h1 { font-size: clamp(2.6rem, 6vw, 4.5rem); color: #fff; font-weight: 600; margin-bottom: 1.5rem; line-height: 1.15; }
+    .hero h1 em { font-style: italic; color: var(--blush); }
+    .hero-sub { font-size: 1.1rem; color: rgba(255,255,255,0.72); max-width: 520px; margin-bottom: 2.75rem; font-weight: 300; line-height: 1.75; }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
 
-    .hero-eyebrow {
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--blush);
-      opacity: 0.8;
-      margin-bottom: 1.75rem;
-    }
+    .hero-scroll { position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%); z-index: 3; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; color: rgba(255,255,255,0.4); font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; }
+    .hero-scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.3)); animation: scrollPulse 2s ease-in-out infinite; }
+    @keyframes scrollPulse { 0%,100% { opacity:0.4; transform:scaleY(1); } 50% { opacity:0.9; transform:scaleY(1.2); } }
 
-    .hero h1 {
-      font-size: clamp(2.6rem, 6vw, 4.5rem);
-      color: #fff;
-      font-weight: 600;
-      margin-bottom: 1.5rem;
-      line-height: 1.15;
-    }
-
-    .hero h1 em {
-      font-style: italic;
-      color: var(--blush);
-    }
-
-    .hero-sub {
-      font-size: 1.1rem;
-      color: rgba(255,255,255,0.7);
-      max-width: 520px;
-      margin-bottom: 2.75rem;
-      font-weight: 300;
-      line-height: 1.75;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    .hero-scroll {
-      position: absolute;
-      bottom: 2.5rem;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-      color: rgba(255,255,255,0.4);
-      font-size: 0.68rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-    }
-
-    .hero-scroll-line {
-      width: 1px;
-      height: 40px;
-      background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.3));
-      animation: scrollPulse 2s ease-in-out infinite;
-    }
-
-    @keyframes scrollPulse {
-      0%, 100% { opacity: 0.4; transform: scaleY(1); }
-      50% { opacity: 0.9; transform: scaleY(1.2); }
-    }
-
-    .hero-stat-bar {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(255,255,255,0.06);
-      backdrop-filter: blur(12px);
-      border-top: 1px solid rgba(255,255,255,0.1);
-      padding: 1.5rem 0;
-    }
-
-    .hero-stats {
-      display: flex;
-      gap: 3rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .hero-stat {
-      text-align: center;
-      color: rgba(255,255,255,0.85);
-    }
-
-    .hero-stat strong {
-      display: block;
-      font-family: 'Playfair Display', serif;
-      font-size: 1.8rem;
-      color: var(--blush);
-      line-height: 1;
-      margin-bottom: 0.25rem;
-    }
-
-    .hero-stat span {
-      font-size: 0.72rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      opacity: 0.65;
-    }
+    .hero-stat-bar { position: absolute; bottom: 0; left: 0; right: 0; z-index: 3; background: rgba(8,4,4,0.48); backdrop-filter: blur(14px); border-top: 1px solid rgba(255,255,255,0.1); padding: 1.5rem 0; }
+    .hero-stats { display: flex; gap: 3rem; justify-content: center; flex-wrap: wrap; }
+    .hero-stat { text-align: center; color: rgba(255,255,255,0.85); }
+    .hero-stat strong { display: block; font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--blush); line-height: 1; margin-bottom: 0.25rem; }
+    .hero-stat span { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.65; }
 
     /* ─── What We Do ────────────────────────────────────────────── */
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: center;
-    }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .what-visual { position: relative; }
 
-    .what-visual {
-      position: relative;
-    }
+    .what-visual-card { background: var(--bg-white); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; box-shadow: 0 4px 32px var(--shadow); }
 
-    .what-visual-card {
-      background: var(--bg-white);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 2rem;
-      box-shadow: 0 4px 32px var(--shadow);
-    }
+    /* talent-pipeline.jpg banner at top of the service card */
+    .what-card-img-wrap { position: relative; width: 100%; height: 210px; overflow: hidden; }
+    .what-card-img-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center 25%; display: block; transition: transform 0.65s ease; }
+    .what-visual-card:hover .what-card-img-wrap img { transform: scale(1.04); }
+    /* Gradient fade from image into white card body */
+    .what-card-img-wrap::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 65%; background: linear-gradient(to bottom, transparent, var(--bg-white)); }
 
-    .what-visual-card-inner {
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-    }
+    .what-visual-card-inner { display: flex; flex-direction: column; gap: 1.25rem; padding: 1.75rem 2rem 2rem; }
+    .what-service-item { display: flex; gap: 1rem; align-items: flex-start; }
+    .what-service-icon { width: 42px; height: 42px; background: var(--blush-light); border-radius: 3px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--rose); }
+    .what-service-text h4 { font-size: 0.95rem; font-family: 'Poppins', sans-serif; font-weight: 600; margin-bottom: 0.2rem; }
+    .what-service-text p { font-size: 0.82rem; color: var(--text-muted); }
 
-    .what-service-item {
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
-    }
-
-    .what-service-icon {
-      width: 42px;
-      height: 42px;
-      background: var(--blush-light);
-      border-radius: 3px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      color: var(--rose);
-    }
-
-    .what-service-text h4 {
-      font-size: 0.95rem;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 600;
-      margin-bottom: 0.2rem;
-    }
-
-    .what-service-text p {
-      font-size: 0.82rem;
-      color: var(--text-muted);
-    }
-
-    .float-badge {
-      position: absolute;
-      top: -1.5rem;
-      right: -1.5rem;
-      background: var(--rose);
-      color: #fff;
-      padding: 1rem 1.25rem;
-      border-radius: 3px;
-      font-family: 'Playfair Display', serif;
-      font-size: 0.9rem;
-      box-shadow: 0 8px 24px var(--shadow-md);
-    }
-
-    .float-badge span {
-      display: block;
-      font-family: 'Poppins', sans-serif;
-      font-size: 0.65rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      opacity: 0.75;
-      margin-bottom: 0.15rem;
-    }
+    .float-badge { position: absolute; top: -1.5rem; right: -1.5rem; background: var(--rose); color: #fff; padding: 1rem 1.25rem; border-radius: 3px; font-family: 'Playfair Display', serif; font-size: 0.9rem; box-shadow: 0 8px 24px var(--shadow-md); }
+    .float-badge span { display: block; font-family: 'Poppins', sans-serif; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.75; margin-bottom: 0.15rem; }
 
     /* ─── Why Companies ─────────────────────────────────────────── */
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .card {
-      background: var(--bg-white);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 2.25rem;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: var(--rose);
-      transform: scaleX(0);
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-      border-color: var(--blush);
-      box-shadow: 0 12px 40px var(--shadow);
-      transform: translateY(-4px);
-    }
-
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+    .card { background: var(--bg-white); border: 1px solid var(--border); border-radius: 4px; padding: 2.25rem; transition: all 0.3s ease; position: relative; overflow: hidden; }
+    .card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: var(--rose); transform: scaleX(0); transition: transform 0.3s ease; }
+    .card:hover { border-color: var(--blush); box-shadow: 0 12px 40px var(--shadow); transform: translateY(-4px); }
     .card:hover::after { transform: scaleX(1); }
-
-    .card-icon {
-      width: 50px;
-      height: 50px;
-      background: var(--blush-light);
-      border-radius: 3px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1.5rem;
-      color: var(--rose);
-    }
-
-    .card h3 {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 0.75rem;
-    }
-
-    .card p {
-      font-size: 0.88rem;
-      color: var(--text-mid);
-      line-height: 1.7;
-    }
+    .card-icon { width: 50px; height: 50px; background: var(--blush-light); border-radius: 3px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--rose); }
+    .card h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.75rem; }
+    .card p { font-size: 0.88rem; color: var(--text-mid); line-height: 1.7; }
 
     /* ─── Roles ─────────────────────────────────────────────────── */
-    .roles-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.25rem;
-    }
-
-    .role-card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 4px;
-      padding: 1.75rem;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      transition: all 0.25s ease;
-      cursor: default;
-    }
-
-    .role-card:hover {
-      background: rgba(165,106,106,0.15);
-      border-color: rgba(165,106,106,0.4);
-      transform: translateX(4px);
-    }
-
-    .role-icon {
-      width: 40px;
-      height: 40px;
-      background: rgba(165,106,106,0.2);
-      border-radius: 3px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      color: var(--blush);
-    }
-
-    .role-card h4 {
-      font-family: 'Poppins', sans-serif;
-      font-size: 0.92rem;
-      font-weight: 500;
-      color: rgba(255,255,255,0.9);
-    }
-
-    .role-card p {
-      font-size: 0.75rem;
-      color: rgba(255,255,255,0.45);
-      margin-top: 0.15rem;
-    }
+    .roles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; }
+    .role-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; padding: 1.75rem; display: flex; align-items: center; gap: 1rem; transition: all 0.25s ease; cursor: default; }
+    .role-card:hover { background: rgba(165,106,106,0.15); border-color: rgba(165,106,106,0.4); transform: translateX(4px); }
+    .role-icon { width: 40px; height: 40px; background: rgba(165,106,106,0.2); border-radius: 3px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--blush); }
+    .role-card h4 { font-family: 'Poppins', sans-serif; font-size: 0.92rem; font-weight: 500; color: rgba(255,255,255,0.9); }
+    .role-card p { font-size: 0.75rem; color: rgba(255,255,255,0.45); margin-top: 0.15rem; }
 
     /* ─── How It Works ──────────────────────────────────────────── */
-    .timeline {
-      position: relative;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2rem;
-    }
-
-    .timeline::before {
-      content: '';
-      position: absolute;
-      top: 2.5rem;
-      left: 12.5%;
-      right: 12.5%;
-      height: 1px;
-      background: linear-gradient(to right, var(--rose) 0%, var(--blush) 100%);
-    }
-
-    .timeline-step {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      position: relative;
-    }
-
-    .timeline-number {
-      width: 52px;
-      height: 52px;
-      background: var(--bg-white);
-      border: 2px solid var(--rose);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Playfair Display', serif;
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--rose);
-      margin-bottom: 1.5rem;
-      position: relative;
-      z-index: 2;
-      background: var(--bg);
-      transition: all 0.3s;
-    }
-
-    .timeline-step:hover .timeline-number {
-      background: var(--rose);
-      color: #fff;
-      transform: scale(1.1);
-    }
-
-    .timeline-step h4 {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-
-    .timeline-step p {
-      font-size: 0.83rem;
-      color: var(--text-mid);
-      line-height: 1.65;
-    }
+    .timeline { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+    .timeline::before { content: ''; position: absolute; top: 2.5rem; left: 12.5%; right: 12.5%; height: 1px; background: linear-gradient(to right, var(--rose) 0%, var(--blush) 100%); }
+    .timeline-step { display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; }
+    .timeline-number { width: 52px; height: 52px; background: var(--bg); border: 2px solid var(--rose); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 600; color: var(--rose); margin-bottom: 1.5rem; position: relative; z-index: 2; transition: all 0.3s; }
+    .timeline-step:hover .timeline-number { background: var(--rose); color: #fff; transform: scale(1.1); }
+    .timeline-step h4 { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .timeline-step p { font-size: 0.83rem; color: var(--text-mid); line-height: 1.65; }
 
     /* ─── SA Advantages ─────────────────────────────────────────── */
-    .benefits-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.25rem;
-    }
-
-    .benefit-item {
-      display: flex;
-      gap: 1.25rem;
-      align-items: flex-start;
-      padding: 1.75rem;
-      background: var(--bg);
-      border-radius: 4px;
-      border: 1px solid var(--border);
-      transition: all 0.25s;
-    }
-
-    .benefit-item:hover {
-      border-color: var(--rose);
-      background: var(--blush-light);
-    }
-
-    .benefit-check {
-      width: 36px;
-      height: 36px;
-      background: var(--rose);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      color: #fff;
-    }
-
-    .benefit-item h4 {
-      font-family: 'Poppins', sans-serif;
-      font-size: 0.95rem;
-      font-weight: 600;
-      margin-bottom: 0.3rem;
-    }
-
-    .benefit-item p {
-      font-size: 0.83rem;
-      color: var(--text-mid);
-    }
+    .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.25rem; }
+    .benefit-item { display: flex; gap: 1.25rem; align-items: flex-start; padding: 1.75rem; background: var(--bg); border-radius: 4px; border: 1px solid var(--border); transition: all 0.25s; }
+    .benefit-item:hover { border-color: var(--rose); background: var(--blush-light); }
+    .benefit-check { width: 36px; height: 36px; background: var(--rose); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: #fff; }
+    .benefit-item h4 { font-family: 'Poppins', sans-serif; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.3rem; }
+    .benefit-item p { font-size: 0.83rem; color: var(--text-mid); }
 
     /* ─── About ─────────────────────────────────────────────────── */
-    .about-wrap {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: center;
-    }
+    .about-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .about-badge { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; color: var(--text-muted); background: var(--bg); border: 1px solid var(--border); border-radius: 2px; padding: 0.4rem 0.85rem; margin-bottom: 1.5rem; }
 
-    .about-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.75rem;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      color: var(--text-muted);
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: 2px;
-      padding: 0.4rem 0.85rem;
-      margin-bottom: 1.5rem;
-    }
+    /* about-us.jpg as background with quote overlaid */
+    .about-visual { position: relative; border-radius: 4px; overflow: hidden; min-height: 400px; }
+    .about-visual-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; z-index: 0; transition: transform 0.7s ease; }
+    .about-visual:hover .about-visual-img { transform: scale(1.03); }
 
-    .about-visual {
-      background: linear-gradient(135deg, var(--rose) 0%, var(--rose-deep) 100%);
-      border-radius: 4px;
-      padding: 3rem;
-      color: #fff;
-      position: relative;
-      overflow: hidden;
+    /* Rose brand tint overlay on top of photo */
+    .about-visual-overlay {
+      position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(155deg, rgba(90,45,45,0.87) 0%, rgba(130,75,75,0.78) 50%, rgba(165,106,106,0.68) 100%);
     }
-
-    .about-visual::before {
+    .about-visual-overlay::before {
       content: '"';
-      position: absolute;
-      top: -0.5rem;
-      left: 1.5rem;
-      font-family: 'Playfair Display', serif;
-      font-size: 12rem;
-      color: rgba(255,255,255,0.06);
-      line-height: 1;
+      position: absolute; top: -0.5rem; left: 1.5rem;
+      font-family: 'Playfair Display', serif; font-size: 12rem;
+      color: rgba(255,255,255,0.06); line-height: 1; z-index: 2;
     }
 
-    .about-visual blockquote {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      font-style: italic;
-      line-height: 1.6;
-      margin-bottom: 2rem;
-      position: relative;
-      z-index: 2;
-    }
+    /* Quote content on top */
+    .about-visual-content { position: relative; z-index: 3; padding: 3rem; color: #fff; }
+    .about-visual-content blockquote { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-style: italic; line-height: 1.6; margin-bottom: 2rem; }
+    .about-author { font-size: 0.82rem; letter-spacing: 0.08em; opacity: 0.7; text-transform: uppercase; font-weight: 500; }
 
-    .about-author {
-      font-size: 0.82rem;
-      letter-spacing: 0.08em;
-      opacity: 0.7;
-      text-transform: uppercase;
-      font-weight: 500;
-    }
-
-    .reg-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.7rem;
-      color: var(--text-muted);
-      border: 1px solid var(--border);
-      border-radius: 2px;
-      padding: 0.3rem 0.75rem;
-      margin-top: 2rem;
-    }
+    .reg-tag { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.7rem; color: var(--text-muted); border: 1px solid var(--border); border-radius: 2px; padding: 0.3rem 0.75rem; margin-top: 2rem; }
 
     /* ─── Candidates ────────────────────────────────────────────── */
-    .candidates-wrap {
-      text-align: center;
-      max-width: 780px;
-      margin: 0 auto;
-    }
+    .candidates-wrap { text-align: center; max-width: 780px; margin: 0 auto; }
+    .candidate-pills { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin-top: 2.5rem; }
+    .pill { display: flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1.1rem; background: var(--bg); border: 1px solid var(--border); border-radius: 100px; font-size: 0.8rem; font-weight: 500; color: var(--text-mid); transition: all 0.2s; }
+    .pill:hover { border-color: var(--rose); color: var(--rose); background: var(--blush-light); }
+    .pill-dot { width: 7px; height: 7px; background: #4CAF50; border-radius: 50%; animation: blink 2s infinite; }
+    @keyframes blink { 0%,100% { opacity:1; } 50% { opacity:0.3; } }
 
-    .candidate-pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      justify-content: center;
-      margin-top: 2.5rem;
-    }
+    /* ─── Lead Form Section ─────────────────────────────────────── */
+    .form-section { position: relative; overflow: hidden; }
 
-    .pill {
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.5rem 1.1rem;
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: 100px;
-      font-size: 0.8rem;
-      font-weight: 500;
-      color: var(--text-mid);
-      transition: all 0.2s;
-    }
-
-    .pill:hover {
-      border-color: var(--rose);
-      color: var(--rose);
-      background: var(--blush-light);
-    }
-
-    .pill-dot {
-      width: 7px;
-      height: 7px;
-      background: #4CAF50;
-      border-radius: 50%;
-      animation: blink 2s infinite;
-    }
-
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.3; }
-    }
-
-    /* ─── Lead Form ─────────────────────────────────────────────── */
-    .form-section {
-      background: linear-gradient(160deg, #2B2B2B 0%, #3D2E2E 100%);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .form-section::before {
+    /* above-form.jpg — full-width banner at the top of the section */
+    .form-banner-wrap { position: relative; width: 100%; height: 340px; overflow: hidden; }
+    .form-banner-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; display: block; }
+    /* Gradient that fades the image into the dark form body below */
+    .form-banner-wrap::after {
       content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(165,106,106,0.2), transparent 70%);
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(20,12,12,0.22) 0%,
+        rgba(35,20,20,0.50) 50%,
+        rgba(43,27,27,1.00) 100%
+      );
     }
-
-    .form-layout {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 6rem;
-      align-items: start;
-      position: relative;
-      z-index: 2;
+    /* Heading text overlaid on the banner image */
+    .form-banner-text {
+      position: absolute; bottom: 2.75rem; left: 50%; transform: translateX(-50%);
+      z-index: 2; text-align: center; color: #fff; width: 100%; padding: 0 2rem;
     }
+    .form-banner-text p { font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--blush); opacity: 0.82; margin-bottom: 0.6rem; }
+    .form-banner-text h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 600; color: #fff; line-height: 1.2; }
+    .form-banner-text h2 em { font-style: italic; color: var(--blush); }
 
-    .form-intro h2 {
-      color: #fff;
-    }
+    /* Dark form body below the banner */
+    .form-body { background: linear-gradient(160deg, #2B2B2B 0%, #3D2E2E 100%); position: relative; padding: 5rem 0 6rem; }
+    .form-body::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(165,106,106,0.18), transparent 70%); pointer-events: none; }
 
-    .form-intro p {
-      color: rgba(255,255,255,0.6);
-      font-size: 1rem;
-      line-height: 1.75;
-      margin-bottom: 2.5rem;
-    }
+    .form-layout { display: grid; grid-template-columns: 1fr 1.2fr; gap: 6rem; align-items: start; position: relative; z-index: 2; }
+    .form-intro h2 { color: #fff; }
+    .form-intro p { color: rgba(255,255,255,0.6); font-size: 1rem; line-height: 1.75; margin-bottom: 2.5rem; }
+    .form-promise { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
+    .form-promise-item { display: flex; align-items: center; gap: 0.75rem; font-size: 0.85rem; color: rgba(255,255,255,0.65); }
+    .form-promise-item svg { color: var(--blush); flex-shrink: 0; }
 
-    .form-promise {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-
-    .form-promise-item {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      font-size: 0.85rem;
-      color: rgba(255,255,255,0.65);
-    }
-
-    .form-promise-item svg {
-      color: var(--blush);
-      flex-shrink: 0;
-    }
-
-    .lead-form {
-      background: var(--bg-white);
-      border-radius: 4px;
-      padding: 2.5rem;
-      box-shadow: 0 24px 60px rgba(0,0,0,0.3);
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
-      margin-bottom: 1.25rem;
-    }
-
-    .form-group label {
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--text-mid);
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      padding: 0.8rem 1rem;
-      border: 1.5px solid var(--border);
-      border-radius: 3px;
-      font-family: 'Poppins', sans-serif;
-      font-size: 0.9rem;
-      color: var(--text);
-      background: var(--bg);
-      transition: all 0.2s;
-      outline: none;
-      appearance: none;
-    }
-
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      border-color: var(--rose);
-      background: #fff;
-      box-shadow: 0 0 0 3px rgba(165,106,106,0.1);
-    }
-
-    .form-group input.error,
-    .form-group select.error,
-    .form-group textarea.error {
-      border-color: #e05252;
-    }
-
-    .field-error {
-      font-size: 0.73rem;
-      color: #e05252;
-      margin-top: 0.2rem;
-    }
-
+    .lead-form { background: var(--bg-white); border-radius: 4px; padding: 2.5rem; box-shadow: 0 24px 60px rgba(0,0,0,0.35); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1.25rem; }
+    .form-group label { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-mid); }
+    .form-group input, .form-group select, .form-group textarea { padding: 0.8rem 1rem; border: 1.5px solid var(--border); border-radius: 3px; font-family: 'Poppins', sans-serif; font-size: 0.9rem; color: var(--text); background: var(--bg); transition: all 0.2s; outline: none; appearance: none; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--rose); background: #fff; box-shadow: 0 0 0 3px rgba(165,106,106,0.1); }
+    .form-group input.error, .form-group select.error, .form-group textarea.error { border-color: #e05252; }
+    .field-error { font-size: 0.73rem; color: #e05252; margin-top: 0.2rem; }
     .form-group textarea { resize: vertical; min-height: 120px; }
-
     .honeypot { display: none !important; }
 
-    .form-submit-btn {
-      width: 100%;
-      padding: 1rem;
-      font-size: 0.95rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      background: var(--rose);
-      color: #fff;
-      border: none;
-      border-radius: 3px;
-      cursor: pointer;
-      transition: all 0.25s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.6rem;
-      position: relative;
-    }
-
-    .form-submit-btn:hover:not(:disabled) {
-      background: var(--rose-dark);
-      transform: translateY(-1px);
-      box-shadow: 0 8px 24px var(--shadow-md);
-    }
-
-    .form-submit-btn:disabled {
-      opacity: 0.7;
-      cursor: not-allowed;
-      transform: none;
-    }
-
-    .spinner {
-      width: 18px;
-      height: 18px;
-      border: 2px solid rgba(255,255,255,0.3);
-      border-top-color: #fff;
-      border-radius: 50%;
-      animation: spin 0.7s linear infinite;
-    }
-
+    .form-submit-btn { width: 100%; padding: 1rem; font-size: 0.95rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; background: var(--rose); color: #fff; border: none; border-radius: 3px; cursor: pointer; transition: all 0.25s; display: flex; align-items: center; justify-content: center; gap: 0.6rem; }
+    .form-submit-btn:hover:not(:disabled) { background: var(--rose-dark); transform: translateY(-1px); box-shadow: 0 8px 24px var(--shadow-md); }
+    .form-submit-btn:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
+    .spinner { width: 18px; height: 18px; border: 2px solid rgba(255,255,255,0.3); border-top-color: #fff; border-radius: 50%; animation: spin 0.7s linear infinite; }
     @keyframes spin { to { transform: rotate(360deg); } }
-
-    .form-feedback {
-      padding: 1rem 1.25rem;
-      border-radius: 3px;
-      font-size: 0.88rem;
-      margin-top: 1rem;
-      display: none;
-    }
-
-    .form-feedback.success {
-      background: #f0faf4;
-      border: 1px solid #a3d9b8;
-      color: #2e7d52;
-      display: block;
-    }
-
-    .form-feedback.error {
-      background: #fef2f2;
-      border: 1px solid #fca5a5;
-      color: #b91c1c;
-      display: block;
-    }
+    .form-feedback { padding: 1rem 1.25rem; border-radius: 3px; font-size: 0.88rem; margin-top: 1rem; display: none; }
+    .form-feedback.success { background: #f0faf4; border: 1px solid #a3d9b8; color: #2e7d52; display: block; }
+    .form-feedback.error { background: #fef2f2; border: 1px solid #fca5a5; color: #b91c1c; display: block; }
 
     /* ─── Contact ───────────────────────────────────────────────── */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
-
-    .contact-card {
-      background: var(--bg-white);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 2rem;
-      text-align: center;
-      transition: all 0.25s;
-    }
-
-    .contact-card:hover {
-      border-color: var(--rose);
-      box-shadow: 0 8px 32px var(--shadow);
-    }
-
-    .contact-card-icon {
-      width: 48px;
-      height: 48px;
-      background: var(--blush-light);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 1rem;
-      color: var(--rose);
-    }
-
-    .contact-card h4 {
-      font-size: 0.8rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 0.5rem;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    .contact-card a {
-      font-size: 0.92rem;
-      color: var(--rose);
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-
+    .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .contact-card { background: var(--bg-white); border: 1px solid var(--border); border-radius: 4px; padding: 2rem; text-align: center; transition: all 0.25s; }
+    .contact-card:hover { border-color: var(--rose); box-shadow: 0 8px 32px var(--shadow); }
+    .contact-card-icon { width: 48px; height: 48px; background: var(--blush-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: var(--rose); }
+    .contact-card h4 { font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.5rem; font-family: 'Poppins', sans-serif; }
+    .contact-card a { font-size: 0.92rem; color: var(--rose); font-weight: 500; transition: color 0.2s; }
     .contact-card a:hover { color: var(--rose-dark); }
 
     /* ─── Footer ────────────────────────────────────────────────── */
-    footer {
-      background: #1E1A1A;
-      color: rgba(255,255,255,0.6);
-      padding: 4rem 0 2rem;
-    }
+    footer { background: #1E1A1A; color: rgba(255,255,255,0.6); padding: 4rem 0 2rem; }
+    .footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 4rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 2rem; }
 
-    .footer-top {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr;
-      gap: 4rem;
-      padding-bottom: 3rem;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      margin-bottom: 2rem;
-    }
+    /* logo.png in footer */
+    .footer-logo-img { height: 44px; width: auto; object-fit: contain; display: block; margin-bottom: 1.25rem; filter: brightness(1.2); }
 
-    .footer-brand {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.2rem;
-      color: #fff;
-      margin-bottom: 1rem;
-    }
+    /* Fallback text brand */
+    .footer-brand { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: #fff; margin-bottom: 1rem; }
+    .footer-brand span { display: block; font-family: 'Poppins', sans-serif; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rose); margin-top: 2px; }
 
-    .footer-brand span {
-      display: block;
-      font-family: 'Poppins', sans-serif;
-      font-size: 0.6rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--rose);
-      margin-top: 2px;
-    }
-
-    .footer-desc {
-      font-size: 0.84rem;
-      line-height: 1.75;
-      margin-bottom: 1.25rem;
-    }
-
-    .footer-reg {
-      font-size: 0.72rem;
-      color: rgba(255,255,255,0.3);
-      letter-spacing: 0.05em;
-    }
-
-    .footer-col h5 {
-      font-family: 'Poppins', sans-serif;
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.85);
-      margin-bottom: 1.25rem;
-    }
-
-    .footer-col ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.7rem;
-    }
-
-    .footer-col ul a {
-      font-size: 0.84rem;
-      color: rgba(255,255,255,0.5);
-      transition: color 0.2s;
-    }
-
+    .footer-desc { font-size: 0.84rem; line-height: 1.75; margin-bottom: 1.25rem; }
+    .footer-reg { font-size: 0.72rem; color: rgba(255,255,255,0.3); letter-spacing: 0.05em; }
+    .footer-col h5 { font-family: 'Poppins', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.85); margin-bottom: 1.25rem; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
+    .footer-col ul a { font-size: 0.84rem; color: rgba(255,255,255,0.5); transition: color 0.2s; }
     .footer-col ul a:hover { color: var(--blush); }
-
-    .footer-bottom {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-size: 0.75rem;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .footer-legal {
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    .footer-legal a {
-      color: rgba(255,255,255,0.4);
-      transition: color 0.2s;
-    }
-
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; font-size: 0.75rem; flex-wrap: wrap; gap: 1rem; }
+    .footer-legal { display: flex; gap: 1.5rem; }
+    .footer-legal a { color: rgba(255,255,255,0.4); transition: color 0.2s; }
     .footer-legal a:hover { color: rgba(255,255,255,0.8); }
 
     /* ─── Animations ────────────────────────────────────────────── */
-    .fade-up {
-      opacity: 0;
-      transform: translateY(32px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-
-    .fade-up.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
+    .fade-up { opacity: 0; transform: translateY(32px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
     .fade-up-delay-1 { transition-delay: 0.1s; }
     .fade-up-delay-2 { transition-delay: 0.2s; }
     .fade-up-delay-3 { transition-delay: 0.3s; }
     .fade-up-delay-4 { transition-delay: 0.4s; }
-
-    .hero-animate {
-      opacity: 0;
-      transform: translateY(24px);
-      animation: heroIn 0.9s ease forwards;
-    }
-
+    .hero-animate { opacity: 0; transform: translateY(24px); animation: heroIn 0.9s ease forwards; }
     .hero-animate-delay-1 { animation-delay: 0.15s; }
     .hero-animate-delay-2 { animation-delay: 0.35s; }
     .hero-animate-delay-3 { animation-delay: 0.55s; }
     .hero-animate-delay-4 { animation-delay: 0.75s; }
-
-    @keyframes heroIn {
-      to { opacity: 1; transform: translateY(0); }
-    }
+    @keyframes heroIn { to { opacity: 1; transform: translateY(0); } }
 
     /* ─── Responsive ────────────────────────────────────────────── */
     @media (max-width: 1024px) {
-      .two-col,
-      .about-wrap { grid-template-columns: 1fr; gap: 3rem; }
+      .two-col, .about-wrap { grid-template-columns: 1fr; gap: 3rem; }
       .timeline { grid-template-columns: repeat(2, 1fr); }
       .timeline::before { display: none; }
       .form-layout { grid-template-columns: 1fr; gap: 3rem; }
       .footer-top { grid-template-columns: 1fr 1fr; }
       .float-badge { display: none; }
     }
-
     @media (max-width: 768px) {
       .section { padding: 4rem 0; }
       .nav-links, .nav-cta { display: none; }
@@ -1278,6 +406,10 @@
       .footer-top { grid-template-columns: 1fr; gap: 2.5rem; }
       .footer-bottom { flex-direction: column; text-align: center; }
       .hero-stat-bar { display: none; }
+      .form-banner-wrap { height: 220px; }
+      .form-banner-text h2 { font-size: 1.6rem; }
+      .about-visual { min-height: 300px; }
+      .what-card-img-wrap { height: 160px; }
     }
 
     /* ─── Misc ──────────────────────────────────────────────────── */
@@ -1295,9 +427,17 @@
   <nav class="nav" id="mainNav" aria-label="Main navigation">
     <div class="container">
       <div class="nav-inner">
-        <a href="/" class="nav-logo" aria-label="Sakeena Jacobs Recruitment Home">
-          Sakeena Jacobs Recruitment
-          <span>Pty Ltd &bull; Est. 2018</span>
+        <a href="/" aria-label="Sakeena Jacobs Recruitment Home">
+          <img
+            src="/assets/logo.png"
+            alt="Sakeena Jacobs Recruitment"
+            class="nav-logo-img"
+            onerror="this.style.display='none';document.getElementById('navLogoFallback').style.display='block';"
+          />
+          <span class="nav-logo-text" id="navLogoFallback">
+            Sakeena Jacobs Recruitment
+            <span>Pty Ltd &bull; Est. 2018</span>
+          </span>
         </a>
         <ul class="nav-links">
           <li><a href="#what-we-do">Services</a></li>
@@ -1326,15 +466,32 @@
     <a href="#lead-form" class="btn btn-primary" style="margin-top:1rem;">Hire Talent</a>
   </div>
 
-  <!-- ─── Hero ────────────────────────────────────────────────── -->
+  <!-- ════════════════════════════════════════════════════════════
+       HERO — hero-bg.jpg sits behind everything
+       Layer order (back to front):
+       0. hero-bg.jpg   (photo)
+       1. hero-overlay  (dark gradient tint)
+       2. hero-grain    (noise texture)
+       3. hero-content  (text + CTAs)
+       ════════════════════════════════════════════════════════════ -->
   <section class="hero" id="hero" aria-labelledby="hero-heading">
-    <div class="hero-grain" aria-hidden="true"></div>
+
+    <img
+      src="/assets/images/hero-bg.jpg"
+      alt=""
+      class="hero-bg-img"
+      aria-hidden="true"
+      loading="eager"
+      fetchpriority="high"
+    />
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-grain"  aria-hidden="true"></div>
+
     <div class="container">
       <div class="hero-content">
         <p class="hero-eyebrow hero-animate">South African Recruitment Agency &bull; Internationally Trusted</p>
         <h1 id="hero-heading" class="hero-animate hero-animate-delay-1">
-          Elite Remote Talent.<br />
-          <em>Delivered with Precision.</em>
+          Elite Remote Talent.<br /><em>Delivered with Precision.</em>
         </h1>
         <p class="hero-sub hero-animate hero-animate-delay-2">
           We connect ambitious international businesses with exceptional South African professionals — rigorously vetted, culture-aligned, and ready to elevate your team from day one.
@@ -1358,28 +515,19 @@
     <div class="hero-stat-bar" aria-hidden="true">
       <div class="container">
         <div class="hero-stats">
-          <div class="hero-stat">
-            <strong>7+</strong>
-            <span>Years Experience</span>
-          </div>
-          <div class="hero-stat">
-            <strong>100%</strong>
-            <span>Vetted Candidates</span>
-          </div>
-          <div class="hero-stat">
-            <strong>48h</strong>
-            <span>Average Response</span>
-          </div>
-          <div class="hero-stat">
-            <strong>Global</strong>
-            <span>Client Reach</span>
-          </div>
+          <div class="hero-stat"><strong>7+</strong><span>Years Experience</span></div>
+          <div class="hero-stat"><strong>100%</strong><span>Vetted Candidates</span></div>
+          <div class="hero-stat"><strong>48h</strong><span>Average Response</span></div>
+          <div class="hero-stat"><strong>Global</strong><span>Client Reach</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ─── What We Do ─────────────────────────────────────────── -->
+  <!-- ════════════════════════════════════════════════════════════
+       WHAT WE DO — talent-pipeline.jpg sits at top of card,
+       fading into the white service list below
+       ════════════════════════════════════════════════════════════ -->
   <section class="section section-alt" id="what-we-do" aria-labelledby="what-heading">
     <div class="container">
       <div class="two-col">
@@ -1392,24 +540,34 @@
           <p class="section-sub fade-up fade-up-delay-2">
             We specialise in placing high-calibre South African remote professionals with international clients who refuse to compromise on quality. Our boutique approach means every placement is handled with care, discretion, and expertise.
           </p>
-          <p style="font-size:0.9rem; color:var(--text-mid); line-height:1.8; margin-bottom:2rem;" class="fade-up fade-up-delay-2">
+          <p style="font-size:0.9rem;color:var(--text-mid);line-height:1.8;margin-bottom:2rem;" class="fade-up fade-up-delay-2">
             From executive assistants supporting C-suite leaders to specialised virtual professionals managing complex operations — we source, vet, and match talent to your exact requirements. No bulk databases. No generic shortlists.
           </p>
           <a href="#lead-form" class="btn btn-primary fade-up fade-up-delay-3">Start Your Hire</a>
         </div>
+
         <div class="what-visual fade-up fade-up-delay-2">
           <div class="what-visual-card">
             <div class="float-badge" aria-hidden="true">
-              <span>Trusted</span>
-              Registered SA Agency
+              <span>Trusted</span>Registered SA Agency
             </div>
+
+            <!-- talent-pipeline.jpg — sits above the 4 service items -->
+            <div class="what-card-img-wrap">
+              <img
+                src="/assets/images/talent-pipeline.jpg"
+                alt="Our South African talent pipeline"
+                loading="lazy"
+              />
+            </div>
+
             <div class="what-visual-card-inner">
               <div class="what-service-item">
                 <div class="what-service-icon" aria-hidden="true">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                 </div>
                 <div class="what-service-text">
-                  <h4>Talent Sourcing & Vetting</h4>
+                  <h4>Talent Sourcing &amp; Vetting</h4>
                   <p>Deep screening beyond the CV — skills testing, reference checks, and culture-fit assessment.</p>
                 </div>
               </div>
@@ -1454,37 +612,27 @@
         <span class="eyebrow fade-up">Why Choose Us</span>
         <h2 class="section-title fade-up fade-up-delay-1" id="why-heading">Why Companies Work With Us</h2>
         <div class="divider fade-up fade-up-delay-1" aria-hidden="true"></div>
-        <p class="section-sub fade-up fade-up-delay-2">
-          We're not a job board. We're your recruitment partner — invested in your growth and the success of every hire.
-        </p>
+        <p class="section-sub fade-up fade-up-delay-2">We're not a job board. We're your recruitment partner — invested in your growth and the success of every hire.</p>
       </div>
       <div class="cards-grid">
         <article class="card fade-up fade-up-delay-1">
-          <div class="card-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
+          <div class="card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
           <h3>Rigorous Pre-Screening</h3>
           <p>Every candidate undergoes a thorough multi-stage vetting process including skills assessments, professional references, and personality profiling before you see a single CV.</p>
         </article>
         <article class="card fade-up fade-up-delay-2">
-          <div class="card-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </div>
+          <div class="card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
           <h3>Boutique Personalisation</h3>
           <p>We take time to understand your company culture, values, and working style. Our matches aren't just skills-based — they're relationship-based for lasting success.</p>
         </article>
         <article class="card fade-up fade-up-delay-3">
-          <div class="card-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-          </div>
+          <div class="card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
           <h3>Cost-Effective Hiring</h3>
           <p>South African talent offers world-class skills at highly competitive rates. Save significantly on recruitment costs without compromising on professionalism or output quality.</p>
         </article>
         <article class="card fade-up fade-up-delay-4">
-          <div class="card-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <h3>Speed & Efficiency</h3>
+          <div class="card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <h3>Speed &amp; Efficiency</h3>
           <p>Our established pipeline means we can present qualified candidates fast. From first contact to shortlist within days — because your business doesn't wait.</p>
         </article>
       </div>
@@ -1498,73 +646,36 @@
         <span class="eyebrow fade-up" style="color:var(--blush);">Specialisations</span>
         <h2 class="section-title fade-up fade-up-delay-1" id="roles-heading">Roles We Recruit For</h2>
         <div class="divider fade-up fade-up-delay-1" aria-hidden="true"></div>
-        <p style="color:rgba(255,255,255,0.55); max-width:560px; margin-bottom:0; font-size:1rem; font-weight:300;" class="fade-up fade-up-delay-2">
-          Covering the full spectrum of remote and virtual professional roles demanded by modern international businesses.
-        </p>
+        <p style="color:rgba(255,255,255,0.55);max-width:560px;margin-bottom:0;font-size:1rem;font-weight:300;" class="fade-up fade-up-delay-2">Covering the full spectrum of remote and virtual professional roles demanded by modern international businesses.</p>
       </div>
       <div class="roles-grid">
         <article class="role-card fade-up fade-up-delay-1">
-          <div class="role-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-          </div>
-          <div>
-            <h4>Virtual Assistants</h4>
-            <p>General &amp; specialist VA roles</p>
-          </div>
+          <div class="role-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+          <div><h4>Virtual Assistants</h4><p>General &amp; specialist VA roles</p></div>
         </article>
         <article class="role-card fade-up fade-up-delay-2">
-          <div class="role-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          </div>
-          <div>
-            <h4>Executive Assistants</h4>
-            <p>C-suite &amp; director support</p>
-          </div>
+          <div class="role-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+          <div><h4>Executive Assistants</h4><p>C-suite &amp; director support</p></div>
         </article>
         <article class="role-card fade-up fade-up-delay-3">
-          <div class="role-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.69 4 2 2 0 0 1 3.66 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          </div>
-          <div>
-            <h4>Customer Service Agents</h4>
-            <p>Inbound, outbound &amp; live chat</p>
-          </div>
+          <div class="role-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.69 4 2 2 0 0 1 3.66 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div><h4>Customer Service Agents</h4><p>Inbound, outbound &amp; live chat</p></div>
         </article>
         <article class="role-card fade-up fade-up-delay-4">
-          <div class="role-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
-          </div>
-          <div>
-            <h4>Project Coordinators</h4>
-            <p>Remote project &amp; ops management</p>
-          </div>
+          <div class="role-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></div>
+          <div><h4>Project Coordinators</h4><p>Remote project &amp; ops management</p></div>
         </article>
         <article class="role-card fade-up fade-up-delay-1">
-          <div class="role-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          </div>
-          <div>
-            <h4>Social Media Managers</h4>
-            <p>Content creation &amp; community</p>
-          </div>
+          <div class="role-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+          <div><h4>Social Media Managers</h4><p>Content creation &amp; community</p></div>
         </article>
         <article class="role-card fade-up fade-up-delay-2">
-          <div class="role-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          </div>
-          <div>
-            <h4>Marketing Assistants</h4>
-            <p>Digital marketing &amp; strategy support</p>
-          </div>
+          <div class="role-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <div><h4>Marketing Assistants</h4><p>Digital marketing &amp; strategy support</p></div>
         </article>
         <article class="role-card fade-up fade-up-delay-3">
-          <div class="role-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
-          </div>
-          <div>
-            <h4>Data Entry &amp; Admin</h4>
-            <p>Operational support &amp; data management</p>
-          </div>
+          <div class="role-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
+          <div><h4>Data Entry &amp; Admin</h4><p>Operational support &amp; data management</p></div>
         </article>
       </div>
     </div>
@@ -1577,9 +688,7 @@
         <span class="eyebrow fade-up">Our Process</span>
         <h2 class="section-title fade-up fade-up-delay-1" id="hiw-heading">How It Works</h2>
         <div class="divider fade-up fade-up-delay-1" aria-hidden="true"></div>
-        <p class="section-sub fade-up fade-up-delay-2">
-          A clear, streamlined process designed to get you the right hire without the complexity.
-        </p>
+        <p class="section-sub fade-up fade-up-delay-2">A clear, streamlined process designed to get you the right hire without the complexity.</p>
       </div>
       <div class="timeline">
         <article class="timeline-step fade-up fade-up-delay-1">
@@ -1613,70 +722,41 @@
         <span class="eyebrow fade-up">The SA Advantage</span>
         <h2 class="section-title fade-up fade-up-delay-1" id="sa-heading">Why Hire South African Virtual Assistants?</h2>
         <div class="divider fade-up fade-up-delay-1" aria-hidden="true"></div>
-        <p class="section-sub fade-up fade-up-delay-2">
-          South Africa produces world-class remote professionals with unique advantages that international businesses consistently praise.
-        </p>
+        <p class="section-sub fade-up fade-up-delay-2">South Africa produces world-class remote professionals with unique advantages that international businesses consistently praise.</p>
       </div>
       <div class="benefits-grid">
         <div class="benefit-item fade-up fade-up-delay-1">
-          <div class="benefit-check" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-          </div>
-          <div>
-            <h4>Native English Proficiency</h4>
-            <p>South African professionals communicate with exceptional clarity in written and spoken English — reducing friction and misunderstandings.</p>
-          </div>
+          <div class="benefit-check" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div><h4>Native English Proficiency</h4><p>South African professionals communicate with exceptional clarity in written and spoken English — reducing friction and misunderstandings.</p></div>
         </div>
         <div class="benefit-item fade-up fade-up-delay-2">
-          <div class="benefit-check" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-          </div>
-          <div>
-            <h4>Timezone Compatibility</h4>
-            <p>SA timezone (SAST/UTC+2) overlaps generously with UK, European, and Middle Eastern business hours — enabling real-time collaboration.</p>
-          </div>
+          <div class="benefit-check" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div><h4>Timezone Compatibility</h4><p>SA timezone (SAST/UTC+2) overlaps generously with UK, European, and Middle Eastern business hours — enabling real-time collaboration.</p></div>
         </div>
         <div class="benefit-item fade-up fade-up-delay-3">
-          <div class="benefit-check" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-          </div>
-          <div>
-            <h4>Highly Educated Workforce</h4>
-            <p>South Africa has strong tertiary education institutions producing graduates skilled in business, tech, communications, and the arts.</p>
-          </div>
+          <div class="benefit-check" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div><h4>Highly Educated Workforce</h4><p>South Africa has strong tertiary education institutions producing graduates skilled in business, tech, communications, and the arts.</p></div>
         </div>
         <div class="benefit-item fade-up fade-up-delay-4">
-          <div class="benefit-check" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-          </div>
-          <div>
-            <h4>Exceptional Work Ethic</h4>
-            <p>Internationally recognised for reliability, adaptability, and professional dedication — SA professionals consistently exceed expectations.</p>
-          </div>
+          <div class="benefit-check" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div><h4>Exceptional Work Ethic</h4><p>Internationally recognised for reliability, adaptability, and professional dedication — SA professionals consistently exceed expectations.</p></div>
         </div>
         <div class="benefit-item fade-up fade-up-delay-1">
-          <div class="benefit-check" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-          </div>
-          <div>
-            <h4>Significant Cost Savings</h4>
-            <p>Access top-tier talent at rates considerably lower than equivalent UK, US, or Australian hires — without sacrificing standards.</p>
-          </div>
+          <div class="benefit-check" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div><h4>Significant Cost Savings</h4><p>Access top-tier talent at rates considerably lower than equivalent UK, US, or Australian hires — without sacrificing standards.</p></div>
         </div>
         <div class="benefit-item fade-up fade-up-delay-2">
-          <div class="benefit-check" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-          </div>
-          <div>
-            <h4>Western Cultural Alignment</h4>
-            <p>Deeply aligned with Western business culture, communication norms, and professional expectations — seamless team integration.</p>
-          </div>
+          <div class="benefit-check" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div><h4>Western Cultural Alignment</h4><p>Deeply aligned with Western business culture, communication norms, and professional expectations — seamless team integration.</p></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ─── About ───────────────────────────────────────────────── -->
+  <!-- ════════════════════════════════════════════════════════════
+       ABOUT — about-us.jpg fills the right column card,
+       with the rose tint overlay and quote layered on top
+       ════════════════════════════════════════════════════════════ -->
   <section class="section" id="about" aria-labelledby="about-heading">
     <div class="container">
       <div class="about-wrap">
@@ -1686,30 +766,33 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             Registered &bull; Reg. No: 2018/341619/07
           </div>
-          <h2 class="section-title fade-up fade-up-delay-1" id="about-heading">
-            Driven by Purpose.<br />Built on Integrity.
-          </h2>
+          <h2 class="section-title fade-up fade-up-delay-1" id="about-heading">Driven by Purpose.<br />Built on Integrity.</h2>
           <div class="divider fade-up fade-up-delay-1" aria-hidden="true"></div>
-          <p style="font-size:0.95rem; color:var(--text-mid); line-height:1.85; margin-bottom:1.5rem;" class="fade-up fade-up-delay-2">
-            Sakeena Jacobs Recruitment (Pty) Ltd was founded on a belief that great talent deserves great opportunities — and great companies deserve great people. We bridge that gap with expertise, empathy, and unwavering commitment to quality.
-          </p>
-          <p style="font-size:0.95rem; color:var(--text-mid); line-height:1.85; margin-bottom:2rem;" class="fade-up fade-up-delay-2">
-            As a proudly South African, female-founded agency, we understand the unique strengths our talent pool brings to the global stage. We advocate fiercely for both our candidates and our clients — creating partnerships that endure.
-          </p>
-          <p style="font-size:0.95rem; color:var(--text-mid); line-height:1.85; margin-bottom:2rem;" class="fade-up fade-up-delay-3">
-            Every placement we make is a reflection of our reputation. That's why we're thorough, honest, and wholly committed to getting it right.
-          </p>
+          <p style="font-size:0.95rem;color:var(--text-mid);line-height:1.85;margin-bottom:1.5rem;" class="fade-up fade-up-delay-2">Sakeena Jacobs Recruitment (Pty) Ltd was founded on a belief that great talent deserves great opportunities — and great companies deserve great people. We bridge that gap with expertise, empathy, and unwavering commitment to quality.</p>
+          <p style="font-size:0.95rem;color:var(--text-mid);line-height:1.85;margin-bottom:2rem;" class="fade-up fade-up-delay-2">As a proudly South African, female-founded agency, we understand the unique strengths our talent pool brings to the global stage. We advocate fiercely for both our candidates and our clients — creating partnerships that endure.</p>
+          <p style="font-size:0.95rem;color:var(--text-mid);line-height:1.85;margin-bottom:2rem;" class="fade-up fade-up-delay-3">Every placement we make is a reflection of our reputation. That's why we're thorough, honest, and wholly committed to getting it right.</p>
           <a href="#lead-form" class="btn btn-primary fade-up fade-up-delay-3">Work With Us</a>
           <div class="reg-tag fade-up fade-up-delay-4" aria-label="Company registration details">
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="9" x2="15" y2="9"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="15" x2="12" y2="15"/></svg>
             SAKEENA JACOBS RECRUITMENT (PTY) LTD &bull; Reg. No: 2018/341619/07
           </div>
         </div>
+
+        <!-- about-us.jpg — photo behind the founder's quote -->
         <div class="about-visual fade-up fade-up-delay-2">
-          <blockquote>
-            "We believe recruitment is not just about filling seats — it's about changing lives, building teams, and creating futures."
-          </blockquote>
-          <p class="about-author">— Sakeena Jacobs, Founder &amp; Director</p>
+          <img
+            src="/assets/images/about-us.jpg"
+            alt="Sakeena Jacobs — Founder &amp; Director of Sakeena Jacobs Recruitment"
+            class="about-visual-img"
+            loading="lazy"
+          />
+          <div class="about-visual-overlay" aria-hidden="true"></div>
+          <div class="about-visual-content">
+            <blockquote>
+              "We believe recruitment is not just about filling seats — it's about changing lives, building teams, and creating futures."
+            </blockquote>
+            <p class="about-author">— Sakeena Jacobs, Founder &amp; Director</p>
+          </div>
         </div>
       </div>
     </div>
@@ -1722,9 +805,7 @@
         <span class="eyebrow fade-up">Talent Pipeline</span>
         <h2 class="section-title fade-up fade-up-delay-1" id="candidates-heading">Candidates Ready to Work</h2>
         <div class="divider fade-up fade-up-delay-1" style="margin:1.25rem auto 0;" aria-hidden="true"></div>
-        <p style="font-size:1rem; color:var(--text-mid); line-height:1.8; margin:1.5rem 0 0; max-width:600px;" class="fade-up fade-up-delay-2">
-          Our active candidate pool is continuously growing. We maintain a vetted pipeline of professionals across all key roles, ready to be matched to your requirements without delay.
-        </p>
+        <p style="font-size:1rem;color:var(--text-mid);line-height:1.8;margin:1.5rem 0 0;max-width:600px;" class="fade-up fade-up-delay-2">Our active candidate pool is continuously growing. We maintain a vetted pipeline of professionals across all key roles, ready to be matched to your requirements without delay.</p>
         <div class="candidate-pills fade-up fade-up-delay-3">
           <div class="pill"><div class="pill-dot" aria-hidden="true"></div> Virtual Assistants Available</div>
           <div class="pill"><div class="pill-dot" aria-hidden="true"></div> Executive Assistants Available</div>
@@ -1741,97 +822,95 @@
     </div>
   </section>
 
-  <!-- ─── Lead Form ────────────────────────────────────────────── -->
-  <section class="section form-section" id="lead-form" aria-labelledby="form-heading">
-    <div class="container">
-      <div class="form-layout">
-        <div class="form-intro">
-          <span class="eyebrow fade-up" style="color:var(--blush);">Start Your Hire</span>
-          <h2 class="section-title fade-up fade-up-delay-1" id="form-heading">
-            Let's Find Your<br />Perfect Hire.
-          </h2>
-          <div class="divider fade-up fade-up-delay-1" aria-hidden="true" style="background:var(--rose);"></div>
-          <p class="fade-up fade-up-delay-2">
-            Tell us about your business and the role you need to fill. Our team will respond within 48 hours with qualified candidates ready to interview.
-          </p>
-          <div class="form-promise fade-up fade-up-delay-3">
-            <div class="form-promise-item">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              48-hour response guarantee
-            </div>
-            <div class="form-promise-item">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              No commitment required to enquire
-            </div>
-            <div class="form-promise-item">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              Confidential and professional handling
-            </div>
-            <div class="form-promise-item">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              Personalised — not automated responses
+  <!-- ════════════════════════════════════════════════════════════
+       LEAD FORM — Structure:
+       ┌──────────────────────────────────────┐
+       │  above-form.jpg (full-width banner)  │  ← .form-banner-wrap
+       │  "Let's Find Your Perfect Hire" text │
+       │  gradient fades image into dark bg ↓ │
+       ├──────────────────────────────────────┤
+       │  Dark form body: copy + form fields  │  ← .form-body
+       └──────────────────────────────────────┘
+       ════════════════════════════════════════════════════════════ -->
+  <section class="form-section" id="lead-form" aria-labelledby="form-heading">
+
+    <!-- above-form.jpg fills this banner -->
+    <div class="form-banner-wrap">
+      <img
+        src="/assets/images/above-form.jpg"
+        alt="Begin your recruitment journey"
+        loading="lazy"
+      />
+      <!-- Headline overlaid on banner image -->
+      <div class="form-banner-text">
+        <p>Start Your Hire</p>
+        <h2 id="form-heading">Let's Find Your <em>Perfect Hire.</em></h2>
+      </div>
+    </div>
+
+    <!-- Dark form body -->
+    <div class="form-body">
+      <div class="container">
+        <div class="form-layout">
+          <div class="form-intro">
+            <p class="fade-up">Tell us about your business and the role you need to fill. Our team will respond within 48 hours with qualified candidates ready to interview.</p>
+            <div class="form-promise fade-up fade-up-delay-1">
+              <div class="form-promise-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>48-hour response guarantee</div>
+              <div class="form-promise-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>No commitment required to enquire</div>
+              <div class="form-promise-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Confidential and professional handling</div>
+              <div class="form-promise-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Personalised — not automated responses</div>
             </div>
           </div>
-        </div>
-        <div>
-          <form class="lead-form fade-up fade-up-delay-2" id="leadForm" novalidate aria-labelledby="form-heading">
-            <!-- Honeypot -->
-            <div class="honeypot" aria-hidden="true">
-              <input type="text" name="website" id="website" tabindex="-1" autocomplete="off" />
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name">Full Name <span style="color:var(--rose);">*</span></label>
-                <input type="text" id="name" name="name" placeholder="Jane Smith" autocomplete="name" required />
-                <div class="field-error" id="name-error" role="alert"></div>
+          <div>
+            <form class="lead-form fade-up fade-up-delay-2" id="leadForm" novalidate aria-labelledby="form-heading">
+              <div class="honeypot" aria-hidden="true">
+                <input type="text" name="website" id="website" tabindex="-1" autocomplete="off" />
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Full Name <span style="color:var(--rose);">*</span></label>
+                  <input type="text" id="name" name="name" placeholder="Jane Smith" autocomplete="name" required />
+                  <div class="field-error" id="name-error" role="alert"></div>
+                </div>
+                <div class="form-group">
+                  <label for="company">Company Name <span style="color:var(--rose);">*</span></label>
+                  <input type="text" id="company" name="company" placeholder="Acme Corp" autocomplete="organization" required />
+                  <div class="field-error" id="company-error" role="alert"></div>
+                </div>
               </div>
               <div class="form-group">
-                <label for="company">Company Name <span style="color:var(--rose);">*</span></label>
-                <input type="text" id="company" name="company" placeholder="Acme Corp" autocomplete="organization" required />
-                <div class="field-error" id="company-error" role="alert"></div>
+                <label for="email">Business Email <span style="color:var(--rose);">*</span></label>
+                <input type="email" id="email" name="email" placeholder="jane@yourcompany.com" autocomplete="email" required />
+                <div class="field-error" id="email-error" role="alert"></div>
               </div>
-            </div>
-
-            <div class="form-group">
-              <label for="email">Business Email <span style="color:var(--rose);">*</span></label>
-              <input type="email" id="email" name="email" placeholder="jane@yourcompany.com" autocomplete="email" required />
-              <div class="field-error" id="email-error" role="alert"></div>
-            </div>
-
-            <div class="form-group">
-              <label for="role">Role You're Hiring For <span style="color:var(--rose);">*</span></label>
-              <select id="role" name="role" required>
-                <option value="">— Select a role —</option>
-                <option value="Virtual Assistant">Virtual Assistant</option>
-                <option value="Executive Assistant">Executive Assistant</option>
-                <option value="Customer Service Agent">Customer Service Agent</option>
-                <option value="Project Coordinator">Project Coordinator</option>
-                <option value="Social Media Manager">Social Media Manager</option>
-                <option value="Marketing Assistant">Marketing Assistant</option>
-                <option value="Data Entry / Admin">Data Entry / Admin</option>
-                <option value="Other">Other (specify in message)</option>
-              </select>
-              <div class="field-error" id="role-error" role="alert"></div>
-            </div>
-
-            <div class="form-group">
-              <label for="message">Tell Us About Your Needs</label>
-              <textarea id="message" name="message" placeholder="Briefly describe the role, hours, responsibilities, and any specific requirements you have..." rows="5"></textarea>
-            </div>
-
-            <button type="submit" class="form-submit-btn" id="submitBtn">
-              <span id="btnText">Send Candidates</span>
-            </button>
-
-            <div class="form-feedback" id="formFeedback" role="status" aria-live="polite"></div>
-
-            <p style="font-size:0.72rem; color:var(--text-muted); margin-top:1rem; text-align:center; line-height:1.6;">
-              By submitting this form you agree to our
-              <a href="privacy-policy.html" style="color:var(--rose);">Privacy Policy</a>.
-              Your information is handled with complete confidentiality.
-            </p>
-          </form>
+              <div class="form-group">
+                <label for="role">Role You're Hiring For <span style="color:var(--rose);">*</span></label>
+                <select id="role" name="role" required>
+                  <option value="">— Select a role —</option>
+                  <option value="Virtual Assistant">Virtual Assistant</option>
+                  <option value="Executive Assistant">Executive Assistant</option>
+                  <option value="Customer Service Agent">Customer Service Agent</option>
+                  <option value="Project Coordinator">Project Coordinator</option>
+                  <option value="Social Media Manager">Social Media Manager</option>
+                  <option value="Marketing Assistant">Marketing Assistant</option>
+                  <option value="Data Entry / Admin">Data Entry / Admin</option>
+                  <option value="Other">Other (specify in message)</option>
+                </select>
+                <div class="field-error" id="role-error" role="alert"></div>
+              </div>
+              <div class="form-group">
+                <label for="message">Tell Us About Your Needs</label>
+                <textarea id="message" name="message" placeholder="Briefly describe the role, hours, responsibilities, and any specific requirements you have..." rows="5"></textarea>
+              </div>
+              <button type="submit" class="form-submit-btn" id="submitBtn">
+                <span id="btnText">Send Candidates</span>
+              </button>
+              <div class="form-feedback" id="formFeedback" role="status" aria-live="polite"></div>
+              <p style="font-size:0.72rem;color:var(--text-muted);margin-top:1rem;text-align:center;line-height:1.6;">
+                By submitting this form you agree to our <a href="/privacy-policy.html" style="color:var(--rose);">Privacy Policy</a>. Your information is handled with complete confidentiality.
+              </p>
+            </form>
+          </div>
         </div>
       </div>
     </div>
@@ -1844,29 +923,21 @@
         <span class="eyebrow fade-up">Get In Touch</span>
         <h2 class="section-title fade-up fade-up-delay-1" id="contact-heading">Contact Us</h2>
         <div class="divider fade-up fade-up-delay-1" aria-hidden="true"></div>
-        <p class="section-sub fade-up fade-up-delay-2">
-          Reach us directly through any of our dedicated email channels. We aim to respond within one business day.
-        </p>
+        <p class="section-sub fade-up fade-up-delay-2">Reach us directly through any of our dedicated email channels. We aim to respond within one business day.</p>
       </div>
       <div class="contact-grid">
         <div class="contact-card fade-up fade-up-delay-1">
-          <div class="contact-card-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </div>
+          <div class="contact-card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
           <h4>General Enquiries</h4>
           <a href="mailto:info@sakeenajacobsrecruitment.com">info@sakeenajacobsrecruitment.com</a>
         </div>
         <div class="contact-card fade-up fade-up-delay-2">
-          <div class="contact-card-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
+          <div class="contact-card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
           <h4>Recruitment</h4>
           <a href="mailto:recruitment@sakeenajacobsrecruitment.com">recruitment@sakeenajacobsrecruitment.com</a>
         </div>
         <div class="contact-card fade-up fade-up-delay-3">
-          <div class="contact-card-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          </div>
+          <div class="contact-card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
           <h4>Direct Contact</h4>
           <a href="mailto:sj@sakeenajacobsrecruitment.com">sj@sakeenajacobsrecruitment.com</a>
         </div>
@@ -1879,13 +950,17 @@
     <div class="container">
       <div class="footer-top">
         <div>
-          <div class="footer-brand">
-            Sakeena Jacobs Recruitment
-            <span>Pty Ltd &bull; Est. 2018</span>
+          <!-- logo.png in footer -->
+          <img
+            src="/assets/logo.png"
+            alt="Sakeena Jacobs Recruitment"
+            class="footer-logo-img"
+            onerror="this.style.display='none';document.getElementById('footerBrandFallback').style.display='block';"
+          />
+          <div class="footer-brand" id="footerBrandFallback" style="display:none;">
+            Sakeena Jacobs Recruitment<span>Pty Ltd &bull; Est. 2018</span>
           </div>
-          <p class="footer-desc">
-            Connecting international businesses with elite South African remote talent. Boutique, personalised, and results-driven recruitment.
-          </p>
+          <p class="footer-desc">Connecting international businesses with elite South African remote talent. Boutique, personalised, and results-driven recruitment.</p>
           <p class="footer-reg">Registration No: 2018/341619/07</p>
         </div>
         <div class="footer-col">
@@ -1905,13 +980,13 @@
             <li><a href="mailto:info@sakeenajacobsrecruitment.com">info@sakeenajacobsrecruitment.com</a></li>
             <li><a href="mailto:recruitment@sakeenajacobsrecruitment.com">recruitment@sakeenajacobsrecruitment.com</a></li>
             <li><a href="mailto:sj@sakeenajacobsrecruitment.com">sj@sakeenajacobsrecruitment.com</a></li>
-            <li style="margin-top:0.5rem; color:rgba(255,255,255,0.3); font-size:0.82rem;">Contact number to be added</li>
+            <li style="margin-top:0.5rem;color:rgba(255,255,255,0.3);font-size:0.82rem;">Contact number to be added</li>
           </ul>
           <div style="margin-top:1.5rem;">
             <h5>Legal</h5>
             <ul>
-              <li><a href="privacy-policy.html">Privacy Policy</a></li>
-              <li><a href="terms.html">Terms of Service</a></li>
+              <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+              <li><a href="/terms.html">Terms of Service</a></li>
             </ul>
           </div>
         </div>
@@ -1919,8 +994,8 @@
       <div class="footer-bottom">
         <p>&copy; <span id="footerYear"></span> Sakeena Jacobs Recruitment (Pty) Ltd. All rights reserved.</p>
         <div class="footer-legal">
-          <a href="privacy-policy.html">Privacy Policy</a>
-          <a href="terms.html">Terms</a>
+          <a href="/privacy-policy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms</a>
         </div>
       </div>
     </div>
@@ -1928,164 +1003,71 @@
 
   <!-- ─── JavaScript ───────────────────────────────────────────── -->
   <script>
-    // Footer Year
     document.getElementById('footerYear').textContent = new Date().getFullYear();
 
-    // ── Nav Scroll Effect ──────────────────────────────────────
+    // Nav scroll
     const nav = document.getElementById('mainNav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 60);
-    }, { passive: true });
+    window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); }, { passive: true });
 
-    // ── Mobile Menu ────────────────────────────────────────────
+    // Mobile menu
     const hamburger = document.getElementById('hamburgerBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     const mobileClose = document.getElementById('mobileClose');
-
-    hamburger.addEventListener('click', () => {
-      mobileMenu.classList.add('open');
-      hamburger.setAttribute('aria-expanded', 'true');
-      document.body.style.overflow = 'hidden';
-    });
-
-    function closeMobileMenu() {
-      mobileMenu.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    }
-
+    hamburger.addEventListener('click', () => { mobileMenu.classList.add('open'); hamburger.setAttribute('aria-expanded','true'); document.body.style.overflow = 'hidden'; });
+    function closeMobileMenu() { mobileMenu.classList.remove('open'); hamburger.setAttribute('aria-expanded','false'); document.body.style.overflow = ''; }
     mobileClose.addEventListener('click', closeMobileMenu);
     mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobileMenu));
 
-    // ── Scroll Animations (Intersection Observer) ──────────────
+    // Scroll animations
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
+      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-    // ── Rate Limiting (client-side) ────────────────────────────
+    // Client-side rate limit
     const RATE_LIMIT_KEY = 'sjr_last_submit';
-    const RATE_LIMIT_MS = 60000; // 1 minute
+    const RATE_LIMIT_MS  = 60000;
+    function isRateLimited() { const last = localStorage.getItem(RATE_LIMIT_KEY); if (!last) return false; return (Date.now() - parseInt(last, 10)) < RATE_LIMIT_MS; }
 
-    function isRateLimited() {
-      const last = localStorage.getItem(RATE_LIMIT_KEY);
-      if (!last) return false;
-      return (Date.now() - parseInt(last, 10)) < RATE_LIMIT_MS;
-    }
-
-    // ── Form Validation & Submission ───────────────────────────
-    const form = document.getElementById('leadForm');
+    // Form
+    const form      = document.getElementById('leadForm');
     const submitBtn = document.getElementById('submitBtn');
-    const btnText = document.getElementById('btnText');
-    const feedback = document.getElementById('formFeedback');
+    const btnText   = document.getElementById('btnText');
+    const feedback  = document.getElementById('formFeedback');
 
-    function clearErrors() {
-      form.querySelectorAll('.field-error').forEach(el => el.textContent = '');
-      form.querySelectorAll('input, select, textarea').forEach(el => el.classList.remove('error'));
+    function clearErrors() { form.querySelectorAll('.field-error').forEach(el => el.textContent = ''); form.querySelectorAll('input,select,textarea').forEach(el => el.classList.remove('error')); }
+    function showError(id, msg) { const f = document.getElementById(id); const e = document.getElementById(id+'-error'); if(f) f.classList.add('error'); if(e) e.textContent = msg; }
+
+    function validateForm(d) {
+      let ok = true; clearErrors();
+      if (!d.name.trim() || d.name.trim().length < 2) { showError('name','Please enter your full name.'); ok=false; }
+      if (!d.company.trim() || d.company.trim().length < 2) { showError('company','Please enter your company name.'); ok=false; }
+      if (!d.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email.trim())) { showError('email','Please enter a valid email address.'); ok=false; }
+      if (!d.role) { showError('role','Please select a role.'); ok=false; }
+      return ok;
     }
 
-    function showError(fieldId, message) {
-      const field = document.getElementById(fieldId);
-      const error = document.getElementById(fieldId + '-error');
-      if (field) field.classList.add('error');
-      if (error) error.textContent = message;
-    }
-
-    function validateForm(data) {
-      let valid = true;
-      clearErrors();
-
-      if (!data.name.trim() || data.name.trim().length < 2) {
-        showError('name', 'Please enter your full name.');
-        valid = false;
-      }
-      if (!data.company.trim() || data.company.trim().length < 2) {
-        showError('company', 'Please enter your company name.');
-        valid = false;
-      }
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!data.email.trim() || !emailRegex.test(data.email.trim())) {
-        showError('email', 'Please enter a valid email address.');
-        valid = false;
-      }
-      if (!data.role) {
-        showError('role', 'Please select a role.');
-        valid = false;
-      }
-      return valid;
-    }
-
-    function setLoading(loading) {
-      if (loading) {
-        submitBtn.disabled = true;
-        btnText.textContent = '';
-        const spinner = document.createElement('div');
-        spinner.className = 'spinner';
-        spinner.id = 'formSpinner';
-        submitBtn.appendChild(spinner);
-      } else {
-        submitBtn.disabled = false;
-        btnText.textContent = 'Send Candidates';
-        const spinner = document.getElementById('formSpinner');
-        if (spinner) spinner.remove();
-      }
+    function setLoading(on) {
+      if (on) { submitBtn.disabled=true; btnText.textContent=''; const s=document.createElement('div'); s.className='spinner'; s.id='formSpinner'; submitBtn.appendChild(s); }
+      else { submitBtn.disabled=false; btnText.textContent='Send Candidates'; const s=document.getElementById('formSpinner'); if(s) s.remove(); }
     }
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
-
-      // Honeypot check
       if (document.getElementById('website').value) return;
-
-      const data = {
-        name: document.getElementById('name').value,
-        company: document.getElementById('company').value,
-        email: document.getElementById('email').value,
-        role: document.getElementById('role').value,
-        message: document.getElementById('message').value,
-      };
-
+      const data = { name: document.getElementById('name').value, company: document.getElementById('company').value, email: document.getElementById('email').value, role: document.getElementById('role').value, message: document.getElementById('message').value };
       if (!validateForm(data)) return;
-
-      if (isRateLimited()) {
-        feedback.className = 'form-feedback error';
-        feedback.textContent = 'Please wait a moment before submitting again.';
-        return;
-      }
-
+      if (isRateLimited()) { feedback.className='form-feedback error'; feedback.textContent='Please wait a moment before submitting again.'; return; }
       setLoading(true);
-      feedback.className = 'form-feedback';
-      feedback.style.display = 'none';
-
+      feedback.className='form-feedback'; feedback.style.display='none';
       try {
-        const response = await fetch('/api/submit-lead', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data),
-        });
-
-        const result = await response.json();
-
-        if (response.ok && result.success) {
-          localStorage.setItem(RATE_LIMIT_KEY, Date.now().toString());
-          feedback.className = 'form-feedback success';
-          feedback.innerHTML = '✓ Thank you! Your enquiry has been received. We\'ll be in touch within 48 hours.';
-          form.reset();
-        } else {
-          throw new Error(result.message || 'Submission failed');
-        }
-      } catch (err) {
-        feedback.className = 'form-feedback error';
-        feedback.textContent = 'Something went wrong. Please try again or email us directly at info@sakeenajacobsrecruitment.com';
-      } finally {
-        setLoading(false);
-      }
+        const res = await fetch('/api/submit-lead', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data) });
+        const result = await res.json();
+        if (res.ok && result.success) { localStorage.setItem(RATE_LIMIT_KEY, Date.now().toString()); feedback.className='form-feedback success'; feedback.innerHTML="✓ Thank you! Your enquiry has been received. We'll be in touch within 48 hours."; form.reset(); }
+        else throw new Error(result.message || 'Submission failed');
+      } catch(err) {
+        feedback.className='form-feedback error'; feedback.textContent='Something went wrong. Please try again or email us directly at info@sakeenajacobsrecruitment.com';
+      } finally { setLoading(false); }
     });
   </script>
 
