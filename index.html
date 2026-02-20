@@ -17,14 +17,14 @@
   <meta property="og:site_name" content="Sakeena Jacobs Recruitment" />
   <meta property="og:image" content="https://sakeenajacobsrecruitment.com/assets/og-image.jpg" />
 
-  <!-- Content Security Policy (Added/Updated) -->
+  <!-- Content Security Policy -->
   <meta http-equiv="Content-Security-Policy" content="
     default-src 'self';
     script-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com;
     style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
     font-src 'self' https://fonts.gstatic.com;
     img-src 'self' data: https:;
-    connect-src 'self' https://sakeena-jacobs-recruitment.vercel.app http://www.sakeenajacobsrecruitment.com http://sakeenajacobsrecruitment.com;
+    connect-src 'self' https://sakeena-jacobs-recruitment.vercel.app http://www.sakeenajacobsrecruitment.com http://sakeenajacobsrecruitment.com https://www.sakeenajacobsrecruitment.com https://sakeenajacobsrecruitment.com;
     object-src 'none';
   ">
 
@@ -131,10 +131,8 @@
     .nav.scrolled { background: rgba(250,250,250,0.96); backdrop-filter: blur(16px); padding: 0.875rem 0; box-shadow: 0 1px 0 var(--border); }
     .nav-inner { display: flex; align-items: center; justify-content: space-between; }
 
-    /* Logo image */
     .nav-logo-img { height: 120px; width: auto; display: block; object-fit: contain; transition: opacity 0.2s; }
     .nav-logo-img:hover { opacity: 0.85; }
-    /* Fallback text */
     .nav-logo-text { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 600; color: var(--text); line-height: 1.2; display: none; }
     .nav-logo-text span { display: block; font-size: 0.6rem; font-family: 'Poppins', sans-serif; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rose); margin-top: 1px; }
 
@@ -153,13 +151,11 @@
     /* ─── Hero ──────────────────────────────────────────────────── */
     .hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; }
 
-    /* hero-bg.jpg — full bleed background */
     .hero-bg-img {
       position: absolute; inset: 0; width: 100%; height: 100%;
       object-fit: cover; object-position: center 30%; z-index: 0;
     }
 
-    /* Multi-layer dark gradient overlay — preserves text readability */
     .hero-overlay {
       position: absolute; inset: 0; z-index: 1;
       background: linear-gradient(
@@ -178,7 +174,6 @@
         radial-gradient(ellipse 35% 35% at 18% 80%, rgba(232,214,214,0.07) 0%, transparent 60%);
     }
 
-    /* Noise grain */
     .hero-grain {
       position: absolute; inset: 0; z-index: 2; opacity: 0.035; pointer-events: none;
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
@@ -204,15 +199,36 @@
 
     /* ─── What We Do ────────────────────────────────────────────── */
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
-    .what-visual { position: relative; }
 
-    .what-visual-card { background: var(--bg-white); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; box-shadow: 0 4px 32px var(--shadow); }
+    /* ── FIXED: what-visual wrapper ─────────────────────────────
+       Added padding-top so the badge (position:absolute; top:-1.5rem)
+       is not clipped by the parent. Also overflow:visible so the
+       badge can overhang outside the wrapper.                     */
+    .what-visual {
+      position: relative;
+      padding-top: 2rem;    /* ← makes room for the badge above the card */
+    }
 
-    /* talent-pipeline.jpg banner at top of the service card */
-    .what-card-img-wrap { position: relative; width: 100%; height: 210px; overflow: hidden; }
+    /* ── FIXED: card must NOT clip the badge ────────────────────
+       overflow:hidden was hiding the badge. Removed it here and
+       moved it only to the image wrapper where it is truly needed. */
+    .what-visual-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: visible;    /* ← was hidden — this was the root cause */
+      box-shadow: 0 4px 32px var(--shadow);
+      position: relative;   /* ← needed so badge positions against this */
+    }
+
+    /* talent-pipeline.jpg banner — keep its own overflow:hidden */
+    .what-card-img-wrap {
+      position: relative; width: 100%; height: 210px;
+      overflow: hidden;           /* ← only the image wrapper clips */
+      border-radius: 4px 4px 0 0; /* ← round top corners to match card */
+    }
     .what-card-img-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center 25%; display: block; transition: transform 0.65s ease; }
     .what-visual-card:hover .what-card-img-wrap img { transform: scale(1.04); }
-    /* Gradient fade from image into white card body */
     .what-card-img-wrap::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 65%; background: linear-gradient(to bottom, transparent, var(--bg-white)); }
 
     .what-visual-card-inner { display: flex; flex-direction: column; gap: 1.25rem; padding: 1.75rem 2rem 2rem; }
@@ -221,7 +237,21 @@
     .what-service-text h4 { font-size: 0.95rem; font-family: 'Poppins', sans-serif; font-weight: 600; margin-bottom: 0.2rem; }
     .what-service-text p { font-size: 0.82rem; color: var(--text-muted); }
 
-    .float-badge { position: absolute; top: -1.5rem; right: -1.5rem; background: var(--rose); color: #fff; padding: 1rem 1.25rem; border-radius: 3px; font-family: 'Playfair Display', serif; font-size: 0.9rem; box-shadow: 0 8px 24px var(--shadow-md); }
+    /* ── FIXED: badge now sits above the card visibly ────────── */
+    .float-badge {
+      position: absolute;
+      top: 0;           /* ← sits at top of .what-visual-card */
+      right: -1rem;     /* ← slightly overhangs right edge */
+      z-index: 10;      /* ← above everything in the card */
+      background: var(--rose);
+      color: #fff;
+      padding: 1rem 1.25rem;
+      border-radius: 3px;
+      font-family: 'Playfair Display', serif;
+      font-size: 0.9rem;
+      box-shadow: 0 8px 24px var(--shadow-md);
+      white-space: nowrap;
+    }
     .float-badge span { display: block; font-family: 'Poppins', sans-serif; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.75; margin-bottom: 0.15rem; }
 
     /* ─── Why Companies ─────────────────────────────────────────── */
@@ -263,12 +293,10 @@
     .about-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
     .about-badge { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; color: var(--text-muted); background: var(--bg); border: 1px solid var(--border); border-radius: 2px; padding: 0.4rem 0.85rem; margin-bottom: 1.5rem; }
 
-    /* about-us.jpg as background with quote overlaid */
     .about-visual { position: relative; border-radius: 4px; overflow: hidden; min-height: 400px; }
     .about-visual-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; z-index: 0; transition: transform 0.7s ease; }
     .about-visual:hover .about-visual-img { transform: scale(1.03); }
 
-    /* Rose brand tint overlay on top of photo */
     .about-visual-overlay {
       position: absolute; inset: 0; z-index: 1;
       background: linear-gradient(155deg, rgba(90,45,45,0.87) 0%, rgba(130,75,75,0.78) 50%, rgba(165,106,106,0.68) 100%);
@@ -280,7 +308,6 @@
       color: rgba(255,255,255,0.06); line-height: 1; z-index: 2;
     }
 
-    /* Quote content on top */
     .about-visual-content { position: relative; z-index: 3; padding: 3rem; color: #fff; }
     .about-visual-content blockquote { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-style: italic; line-height: 1.6; margin-bottom: 2rem; }
     .about-author { font-size: 0.82rem; letter-spacing: 0.08em; opacity: 0.7; text-transform: uppercase; font-weight: 500; }
@@ -298,10 +325,8 @@
     /* ─── Lead Form Section ─────────────────────────────────────── */
     .form-section { position: relative; overflow: hidden; }
 
-    /* above-form.jpg — full-width banner at the top of the section */
     .form-banner-wrap { position: relative; width: 100%; height: 340px; overflow: hidden; }
     .form-banner-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; display: block; }
-    /* Gradient that fades the image into the dark form body below */
     .form-banner-wrap::after {
       content: '';
       position: absolute; inset: 0;
@@ -312,7 +337,6 @@
         rgba(43,27,27,1.00) 100%
       );
     }
-    /* Heading text overlaid on the banner image */
     .form-banner-text {
       position: absolute; bottom: 2.75rem; left: 50%; transform: translateX(-50%);
       z-index: 2; text-align: center; color: #fff; width: 100%; padding: 0 2rem;
@@ -321,7 +345,6 @@
     .form-banner-text h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 600; color: #fff; line-height: 1.2; }
     .form-banner-text h2 em { font-style: italic; color: var(--blush); }
 
-    /* Dark form body below the banner */
     .form-body { background: linear-gradient(160deg, #2B2B2B 0%, #3D2E2E 100%); position: relative; padding: 5rem 0 6rem; }
     .form-body::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(165,106,106,0.18), transparent 70%); pointer-events: none; }
 
@@ -365,10 +388,8 @@
     footer { background: #1E1A1A; color: rgba(255,255,255,0.6); padding: 4rem 0 2rem; }
     .footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 4rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 2rem; }
 
-    /* logo.png in footer */
     .footer-logo-img { height: 96px; width: auto; object-fit: contain; display: block; margin-bottom: 1.25rem; filter: brightness(1.2); }
 
-    /* Fallback text brand */
     .footer-brand { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: #fff; margin-bottom: 1rem; }
     .footer-brand span { display: block; font-family: 'Poppins', sans-serif; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rose); margin-top: 2px; }
 
@@ -478,26 +499,12 @@
   </div>
 
   <!-- ════════════════════════════════════════════════════════════
-       HERO — hero-bg.jpg sits behind everything
-       Layer order (back to front):
-       0. hero-bg.jpg   (photo)
-       1. hero-overlay  (dark gradient tint)
-       2. hero-grain    (noise texture)
-       3. hero-content  (text + CTAs)
+       HERO
        ════════════════════════════════════════════════════════════ -->
   <section class="hero" id="hero" aria-labelledby="hero-heading">
-
-    <img
-      src="/assets/images/hero-bg.jpg"
-      alt=""
-      class="hero-bg-img"
-      aria-hidden="true"
-      loading="eager"
-      fetchpriority="high"
-    />
+    <img src="/assets/images/hero-bg.jpg" alt="" class="hero-bg-img" aria-hidden="true" loading="eager" fetchpriority="high" />
     <div class="hero-overlay" aria-hidden="true"></div>
-    <div class="hero-grain"  aria-hidden="true"></div>
-
+    <div class="hero-grain" aria-hidden="true"></div>
     <div class="container">
       <div class="hero-content">
         <p class="hero-eyebrow hero-animate">South African Recruitment Agency &bull; Internationally Trusted</p>
@@ -517,12 +524,10 @@
         </div>
       </div>
     </div>
-
     <div class="hero-scroll" aria-hidden="true">
       <span>Scroll</span>
       <div class="hero-scroll-line"></div>
     </div>
-
     <div class="hero-stat-bar" aria-hidden="true">
       <div class="container">
         <div class="hero-stats">
@@ -536,8 +541,7 @@
   </section>
 
   <!-- ════════════════════════════════════════════════════════════
-       WHAT WE DO — talent-pipeline.jpg sits at top of card,
-       fading into the white service list below
+       WHAT WE DO
        ════════════════════════════════════════════════════════════ -->
   <section class="section section-alt" id="what-we-do" aria-labelledby="what-heading">
     <div class="container">
@@ -557,19 +561,18 @@
           <a href="#lead-form" class="btn btn-primary fade-up fade-up-delay-3">Start Your Hire</a>
         </div>
 
+        <!-- ── FIXED: padding-top on .what-visual makes room for badge ── -->
         <div class="what-visual fade-up fade-up-delay-2">
+          <!-- ── FIXED: overflow:visible on card so badge shows above it ── -->
           <div class="what-visual-card">
+            <!-- Badge now positions against .what-visual-card (overflow:visible) -->
             <div class="float-badge" aria-hidden="true">
               <span>Trusted</span>Registered SA Agency
             </div>
 
-            <!-- talent-pipeline.jpg — sits above the 4 service items -->
+            <!-- Image wrapper keeps its own overflow:hidden -->
             <div class="what-card-img-wrap">
-              <img
-                src="/assets/images/talent-pipeline.jpg"
-                alt="Our South African talent pipeline"
-                loading="lazy"
-              />
+              <img src="/assets/images/talent-pipeline.jpg" alt="Our South African talent pipeline" loading="lazy" />
             </div>
 
             <div class="what-visual-card-inner">
@@ -765,8 +768,7 @@
   </section>
 
   <!-- ════════════════════════════════════════════════════════════
-       ABOUT — about-us.jpg fills the right column card,
-       with the rose tint overlay and quote layered on top
+       ABOUT
        ════════════════════════════════════════════════════════════ -->
   <section class="section" id="about" aria-labelledby="about-heading">
     <div class="container">
@@ -788,15 +790,8 @@
             SAKEENA JACOBS RECRUITMENT (PTY) LTD &bull; Reg. No: 2018/341619/07
           </div>
         </div>
-
-        <!-- about-us.jpg — photo behind the founder's quote -->
         <div class="about-visual fade-up fade-up-delay-2">
-          <img
-            src="/assets/images/about-us.jpg"
-            alt="Sakeena Jacobs — Founder &amp; Director of Sakeena Jacobs Recruitment"
-            class="about-visual-img"
-            loading="lazy"
-          />
+          <img src="/assets/images/about-us.jpg" alt="Sakeena Jacobs — Founder &amp; Director of Sakeena Jacobs Recruitment" class="about-visual-img" loading="lazy" />
           <div class="about-visual-overlay" aria-hidden="true"></div>
           <div class="about-visual-content">
             <blockquote>
@@ -834,32 +829,16 @@
   </section>
 
   <!-- ════════════════════════════════════════════════════════════
-       LEAD FORM — Structure:
-       ┌──────────────────────────────────────┐
-       │  above-form.jpg (full-width banner)  │  ← .form-banner-wrap
-       │  "Let's Find Your Perfect Hire" text │
-       │  gradient fades image into dark bg ↓ │
-       ├──────────────────────────────────────┤
-       │  Dark form body: copy + form fields  │  ← .form-body
-       └──────────────────────────────────────┘
+       LEAD FORM
        ════════════════════════════════════════════════════════════ -->
   <section class="form-section" id="lead-form" aria-labelledby="form-heading">
-
-    <!-- above-form.jpg fills this banner -->
     <div class="form-banner-wrap">
-      <img
-        src="/assets/images/above-form.jpg"
-        alt="Begin your recruitment journey"
-        loading="lazy"
-      />
-      <!-- Headline overlaid on banner image -->
+      <img src="/assets/images/above-form.jpg" alt="Begin your recruitment journey" loading="lazy" />
       <div class="form-banner-text">
         <p>Start Your Hire</p>
         <h2 id="form-heading">Let's Find Your <em>Perfect Hire.</em></h2>
       </div>
     </div>
-
-    <!-- Dark form body -->
     <div class="form-body">
       <div class="container">
         <div class="form-layout">
@@ -914,7 +893,7 @@
                 <textarea id="message" name="message" placeholder="Briefly describe the role, hours, responsibilities, and any specific requirements you have..." rows="5"></textarea>
               </div>
               <button type="submit" class="form-submit-btn" id="submitBtn">
-                <span id="btnText">Send Candidates</span>
+                <span id="btnText">Send Enquiry</span>
               </button>
               <div class="form-feedback" id="formFeedback" role="status" aria-live="polite"></div>
               <p style="font-size:0.72rem;color:var(--text-muted);margin-top:1rem;text-align:center;line-height:1.6;">
@@ -961,7 +940,6 @@
     <div class="container">
       <div class="footer-top">
         <div>
-          <!-- logo.png in footer -->
           <img
             src="/assets/logo.png"
             alt="Sakeena Jacobs Recruitment"
@@ -991,7 +969,6 @@
             <li><a href="mailto:info@sakeenajacobsrecruitment.com">info@sakeenajacobsrecruitment.com</a></li>
             <li><a href="mailto:recruitment@sakeenajacobsrecruitment.com">recruitment@sakeenajacobsrecruitment.com</a></li>
             <li><a href="mailto:sj@sakeenajacobsrecruitment.com">sj@sakeenajacobsrecruitment.com</a></li>
-            <!-- <li style="margin-top:0.5rem;color:rgba(255,255,255,0.3);font-size:0.82rem;">Contact number to be added</li>-->
           </ul>
           <div style="margin-top:1.5rem;">
             <h5>Legal</h5>
@@ -1060,7 +1037,7 @@
 
     function setLoading(on) {
       if (on) { submitBtn.disabled=true; btnText.textContent=''; const s=document.createElement('div'); s.className='spinner'; s.id='formSpinner'; submitBtn.appendChild(s); }
-      else { submitBtn.disabled=false; btnText.textContent='Send Candidates'; const s=document.getElementById('formSpinner'); if(s) s.remove(); }
+      else { submitBtn.disabled=false; btnText.textContent='Send Enquiry'; const s=document.getElementById('formSpinner'); if(s) s.remove(); }
     }
 
     form.addEventListener('submit', async (e) => {
@@ -1074,7 +1051,7 @@
       try {
         const res = await fetch('https://sakeena-jacobs-recruitment.vercel.app/api/submit-lead', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data) });
         const result = await res.json();
-        if (res.ok && result.success) { localStorage.setItem(RATE_LIMIT_KEY, Date.now().toString()); feedback.className='form-feedback success'; feedback.innerHTML="✓ Thank you! Your enquiry has been received. We'll be in touch within 48 hours."; form.reset(); }
+        if (res.ok && result.success) { localStorage.setItem(RATE_LIMIT_KEY, Date.now().toString()); feedback.className='form-feedback success'; feedback.innerHTML="&#10003; Thank you! Your enquiry has been received. We'll be in touch within 48 hours."; form.reset(); }
         else throw new Error(result.message || 'Submission failed');
       } catch(err) {
         feedback.className='form-feedback error'; feedback.textContent='Something went wrong. Please try again or email us directly at info@sakeenajacobsrecruitment.com';
