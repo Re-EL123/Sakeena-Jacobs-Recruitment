@@ -1,4 +1,4 @@
-// /api/submit-lead.js
+// api/submit-lead.js
 // Vercel Serverless Function — Node.js 20
 // Lead form submission handler for Sakeena Jacobs Recruitment
 
@@ -139,6 +139,7 @@ function setCorsHeaders(res, origin) {
   const allowed = [
     'https://sakeenajacobsrecruitment.com',
     'https://www.sakeenajacobsrecruitment.com',
+    'https://sakeena-jacobs-recruitment.vercel.app',
   ];
   if (allowed.includes(origin)) {
     res.setHeader('Access-Control-Allow-Origin', origin);

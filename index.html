@@ -1061,7 +1061,7 @@
       setLoading(true);
       feedback.className='form-feedback'; feedback.style.display='none';
       try {
-        const res = await fetch('/api/submit-lead', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data) });
+        const res = await fetch('https://sakeena-jacobs-recruitment.vercel.app/api/submit-lead', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data) });
         const result = await res.json();
         if (res.ok && result.success) { localStorage.setItem(RATE_LIMIT_KEY, Date.now().toString()); feedback.className='form-feedback success'; feedback.innerHTML="✓ Thank you! Your enquiry has been received. We'll be in touch within 48 hours."; form.reset(); }
         else throw new Error(result.message || 'Submission failed');

@@ -49,7 +49,7 @@ SMTP_PASS=your-smtp-password-or-app-password
 ```
 
 4. Deploy to production: `vercel --prod`
-5. Note your Vercel deployment URL (e.g. `https://sakeena-jacobs.vercel.app`)
+5. Note your Vercel deployment URL (e.g. `https://sakeena-jacobs-recruitment.vercel.app/`)
 
 ### Connecting Frontend to Backend
 
@@ -64,7 +64,7 @@ const response = await fetch('https://api.sakeenajacobsrecruitment.com/api/submi
 **Option B — Direct Vercel URL:**
 Update the fetch URL in `index.html` to your full Vercel URL:
 ```js
-const response = await fetch('https://sakeena-jacobs.vercel.app/api/submit-lead', { ... });
+const response = await fetch('https://sakeena-jacobs-recruitment.vercel.app/api/submit-lead', { ... });
 ```
 
 Also update CORS allowed origins in `api/submit-lead.js` accordingly.
