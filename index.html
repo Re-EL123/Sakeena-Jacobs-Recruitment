@@ -17,6 +17,17 @@
   <meta property="og:site_name" content="Sakeena Jacobs Recruitment" />
   <meta property="og:image" content="https://sakeenajacobsrecruitment.com/assets/og-image.jpg" />
 
+  <!-- Content Security Policy (Added/Updated) -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com;
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+    font-src 'self' https://fonts.gstatic.com;
+    img-src 'self' data: https:;
+    connect-src 'self' https://sakeena-jacobs-recruitment.vercel.app http://www.sakeenajacobsrecruitment.com http://sakeenajacobsrecruitment.com;
+    object-src 'none';
+  ">
+
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Sakeena Jacobs Recruitment | Elite South African Remote Talent" />
@@ -341,7 +352,7 @@
     .form-feedback.success { background: #f0faf4; border: 1px solid #a3d9b8; color: #2e7d52; display: block; }
     .form-feedback.error { background: #fef2f2; border: 1px solid #fca5a5; color: #b91c1c; display: block; }
 
-    /* ─── Contact ───────────────────────────────────────────────── */
+    /* ─── Contact ─────────────────────────────────────────────── */
     .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
     .contact-card { background: var(--bg-white); border: 1px solid var(--border); border-radius: 4px; padding: 2rem; text-align: center; transition: all 0.25s; }
     .contact-card:hover { border-color: var(--rose); box-shadow: 0 8px 32px var(--shadow); }
