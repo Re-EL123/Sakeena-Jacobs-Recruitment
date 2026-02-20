@@ -1,4 +1,4 @@
-// api/submit-lead.js
+// /api/submit-lead.js
 // Vercel Serverless Function — Node.js 20
 // Lead form submission handler for Sakeena Jacobs Recruitment
 
@@ -43,7 +43,7 @@ function sanitize(str) {
     .substring(0, 2000);
 }
 
-// ── Email HTML Template ────────────────────────────────────────────
+// ── Email HTML Template ───────────────────────────────────────────
 function buildEmailHTML({ name, company, email, role, message }) {
   const timestamp = new Date().toLocaleString('en-ZA', {
     timeZone: 'Africa/Johannesburg',
@@ -134,18 +134,32 @@ function buildEmailHTML({ name, company, email, role, message }) {
   `.trim();
 }
 
+// ── CORS Allowed Origins ──────────────────────────────────────────
+const ALLOWED_ORIGINS = [
+  'https://sakeenajacobsrecruitment.com',
+  'https://www.sakeenajacobsrecruitment.com',
+  'http://sakeenajacobsrecruitment.com',
+  'http://www.sakeenajacobsrecruitment.com',
+  'https://sakeena-jacobs-recruitment.vercel.app',
+  'http://sakeena-jacobs-recruitment.vercel.app',
+  'http://localhost:3000',
+  'http://localhost:5500',
+];
+
 // ── CORS Headers ──────────────────────────────────────────────────
 function setCorsHeaders(res, origin) {
-  const allowed = [
-    'https://sakeenajacobsrecruitment.com',
-    'https://www.sakeenajacobsrecruitment.com',
-    'https://sakeena-jacobs-recruitment.vercel.app',
-  ];
-  if (allowed.includes(origin)) {
-    res.setHeader('Access-Control-Allow-Origin', origin);
+  // If origin is in allowed list, reflect it back
+  // If no origin (e.g. direct API call / Postman), allow it
+  if (!origin || ALLOWED_ORIGINS.includes(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', origin || '*');
+  } else {
+    // Still set the header but to a safe value so preflight
+    // doesn't hang — the request will be blocked by the browser
+    res.setHeader('Access-Control-Allow-Origin', 'https://sakeenajacobsrecruitment.com');
   }
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Accept');
+  res.setHeader('Access-Control-Max-Age', '86400'); // Cache preflight 24h
   res.setHeader('X-Content-Type-Options', 'nosniff');
   res.setHeader('X-Frame-Options', 'DENY');
 }
@@ -155,7 +169,7 @@ module.exports = async function handler(req, res) {
   const origin = req.headers.origin || '';
   setCorsHeaders(res, origin);
 
-  // Preflight
+  // ── Preflight — MUST return 200 with CORS headers ─────────────
   if (req.method === 'OPTIONS') {
     return res.status(200).end();
   }
@@ -166,7 +180,11 @@ module.exports = async function handler(req, res) {
   }
 
   // Rate limiting
-  const ip = req.headers['x-forwarded-for']?.split(',')[0]?.trim() || req.socket?.remoteAddress || 'unknown';
+  const ip =
+    req.headers['x-forwarded-for']?.split(',')[0]?.trim() ||
+    req.socket?.remoteAddress ||
+    'unknown';
+
   if (isRateLimited(ip)) {
     return res.status(429).json({ success: false, message: 'Too many requests. Please wait and try again.' });
   }
@@ -176,18 +194,20 @@ module.exports = async function handler(req, res) {
   if (typeof body === 'string') {
     try { body = JSON.parse(body); } catch { body = {}; }
   }
+  if (!body || typeof body !== 'object') {
+    body = {};
+  }
 
   // Honeypot check
   if (body.website) {
-    // Silent success for bots
     return res.status(200).json({ success: true });
   }
 
   // Sanitize inputs
-  const name = sanitize(body.name || '');
+  const name    = sanitize(body.name    || '');
   const company = sanitize(body.company || '');
-  const email = sanitize(body.email || '');
-  const role = sanitize(body.role || '');
+  const email   = sanitize(body.email   || '');
+  const role    = sanitize(body.role    || '');
   const message = sanitize(body.message || '');
 
   // Server-side validation
@@ -223,18 +243,17 @@ module.exports = async function handler(req, res) {
     tls: { rejectUnauthorized: true },
   });
 
-  // Build email
+  // Build and send email
   const mailOptions = {
-    from: `"Sakeena Jacobs Recruitment — Lead Form" <${process.env.SMTP_USER}>`,
-    to: 'info@sakeenajacobsrecruitment.com',
-    cc: 'recruitment@sakeenajacobsrecruitment.com',
+    from:    `"Sakeena Jacobs Recruitment — Lead Form" <${process.env.SMTP_USER}>`,
+    to:      'info@sakeenajacobsrecruitment.com',
+    cc:      'recruitment@sakeenajacobsrecruitment.com',
     replyTo: email,
     subject: `New Recruitment Lead: ${role} — ${company}`,
-    html: buildEmailHTML({ name, company, email, role, message }),
-    text: `New lead from ${name} (${company})\nEmail: ${email}\nRole: ${role}\nMessage: ${message}`,
+    html:    buildEmailHTML({ name, company, email, role, message }),
+    text:    `New lead from ${name} (${company})\nEmail: ${email}\nRole: ${role}\nMessage: ${message}`,
   };
 
-  // Send email
   try {
     await transporter.sendMail(mailOptions);
     console.log(`Lead submitted: ${name} | ${company} | ${role} | ${new Date().toISOString()}`);
